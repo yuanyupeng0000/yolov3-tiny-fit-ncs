@@ -1,0 +1,124 @@
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4bbc9/fast"
+make[1]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_4bbc9.dir/build.make CMakeFiles/cmTC_4bbc9.dir/build
+make[2]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4bbc9.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_4bbc9.dir/CheckIncludeFile.c.o   -c /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4bbc9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bbc9.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_4bbc9.dir/CheckIncludeFile.c.o  -o cmTC_4bbc9 -rdynamic 
+make[2]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_15b26/fast"
+make[1]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_15b26.dir/build.make CMakeFiles/cmTC_15b26.dir/build
+make[2]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15b26.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_15b26.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_15b26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15b26.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_15b26.dir/CheckFunctionExists.c.o  -o cmTC_15b26 -rdynamic -lpthread 
+make[2]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ede62/fast"
+make[1]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ede62.dir/build.make CMakeFiles/cmTC_ede62.dir/build
+make[2]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ede62.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_ede62.dir/CheckIncludeFile.c.o   -c /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ede62
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ede62.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_ede62.dir/CheckIncludeFile.c.o  -o cmTC_ede62 -rdynamic 
+make[2]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_60e89/fast"
+make[1]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_60e89.dir/build.make CMakeFiles/cmTC_60e89.dir/build
+make[2]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_60e89.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_60e89.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_60e89
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60e89.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_60e89.dir/CheckFunctionExists.c.o  -o cmTC_60e89 -rdynamic -lpthread 
+make[2]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d37fd/fast"
+make[1]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_d37fd.dir/build.make CMakeFiles/cmTC_d37fd.dir/build
+make[2]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d37fd.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_d37fd.dir/CheckIncludeFile.c.o   -c /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d37fd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d37fd.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_d37fd.dir/CheckIncludeFile.c.o  -o cmTC_d37fd -rdynamic 
+make[2]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_827ab/fast"
+make[1]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_827ab.dir/build.make CMakeFiles/cmTC_827ab.dir/build
+make[2]: Entering directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_827ab.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_827ab.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_827ab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_827ab.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_827ab.dir/CheckFunctionExists.c.o  -o cmTC_827ab -rdynamic -lpthread 
+make[2]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/data/github_repo/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dd474/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dd474.dir/build.make CMakeFiles/cmTC_dd474.dir/build
+make[1]: Entering directory '/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dd474.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_dd474.dir/CheckIncludeFile.c.o   -c /data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_dd474
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd474.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_dd474.dir/CheckIncludeFile.c.o  -o cmTC_dd474 -rdynamic 
+make[1]: Leaving directory '/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fefbf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fefbf.dir/build.make CMakeFiles/cmTC_fefbf.dir/build
+make[1]: Entering directory '/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fefbf.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fefbf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fefbf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fefbf.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_fefbf.dir/CheckFunctionExists.c.o  -o cmTC_fefbf -rdynamic -lpthread 
+make[1]: Leaving directory '/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/CMakeTmp'
+
+

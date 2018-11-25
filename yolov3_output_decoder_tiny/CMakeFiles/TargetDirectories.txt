@@ -1,0 +1,12 @@
+/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/install.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/list_install_components.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/sysDetectSpeed.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/edit_cache.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/install/local.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/CMakeFiles/rebuild_cache.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/detectnet/CMakeFiles/install.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/detectnet/CMakeFiles/list_install_components.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/detectnet/CMakeFiles/detectnet.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/detectnet/CMakeFiles/install/local.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/detectnet/CMakeFiles/rebuild_cache.dir
+/data/github-repos/darknet/yolov3_output_decoder_tiny/detectnet/CMakeFiles/edit_cache.dir
