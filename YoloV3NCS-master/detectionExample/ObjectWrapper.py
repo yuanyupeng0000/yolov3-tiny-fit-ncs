@@ -39,8 +39,8 @@ class ObjectWrapper():
         select = 1
         self.detector = YoloDetector(select)
         for i in range(ObjectWrapper.devNum):
-            ObjectWrapper.devHandle.append(mvnc.Device(ObjectWrapper.devices[i]))
-            ObjectWrapper.devHandle[i].open()
+            ObjectWrapper.devHandle.append(mvnc.Device(ObjectWrapper.devices[i])) ##------get devices
+            ObjectWrapper.devHandle[i].open() ##------ open device_i
             # load blob
             with open(graphfile, mode='rb') as f:
                 blob = f.read()
@@ -51,13 +51,22 @@ class ObjectWrapper():
             ObjectWrapper.fifoInHandle.append(fifoIn)
             ObjectWrapper.fifoOutHandle.append(fifoOut)
  
-        self.dim = (416,416)
-        self.blockwd = 13
+        if(graphfile.endswith('416')):
+            self.dim = (416,416)
+        elif(graphfile.endswith('288')):
+            self.dim = (288,288)
+        elif(graphfile.endswith('352')):
+            self.dim = (352,352)
+        else:
+            self.dim = (416, 416)
+
+        self.blockwd = int(self.dim[0]/32)
         self.wh = self.blockwd*self.blockwd
-        self.targetBlockwd = 13
+        self.targetBlockwd = int(self.dim[0]/32)
         self.classes = 6
         self.threshold = 0.3
         self.nms = 0.45
+
 
     def __del__(self):
         for i in range(ObjectWrapper.devNum):
@@ -92,16 +101,16 @@ class ObjectWrapper():
         imgb = np.empty((dim[0], dim[1], 3))
         imgb.fill(0.5)
 
-        neww = 416
-        newh = 416
+        #neww = 416
+        #newh = 416
+        neww = dim[0]
+        newh = dim[1]
 
         offx = int((dim[0] - neww)/2)
         offy = int((dim[1] - newh)/2)
 
         imgb[offy:offy+newh,offx:offx+neww,:] = resize(img.copy()/255.0,(newh,neww),1)
-        im = imgb[:,:,(2,1,0)]
-        #im = imgb
-        
+        im = imgb[:,:,(2,1,0)]       
 
         return im, int(offx*imgw/neww), int(offy*imgh/newh), neww/dim[0], newh/dim[1]
         #return transposed_img, int(offx*imgw/neww), int(offy*imgh/newh), neww/dim[0], newh/dim[1]
@@ -125,13 +134,13 @@ class ObjectWrapper():
             #if(len(bbox)<2):
                 #continue
             bbox_array = np.array(bbox, dtype=np.float) ## 获取当前目标类别下所有矩形框（bounding box,下面简称bbx）的坐标和confidence,并计算所有bbx的面积
-            print('bbox_array:{0}'.format(bbox_array))
+            #print('bbox_array:{0}'.format(bbox_array))
             x1, y1, x2, y2, scores = bbox_array[:,0], bbox_array[:,1], bbox_array[:,2], bbox_array[:,3], bbox_array[:,4]
             areas = (x2-x1+1) * (y2-y1+1)
             #print "areas shape = ", areas.shape
             ## 对当前类别下所有的bbx的confidence进行从高到低排序（order保存索引信息）
             order = scores.argsort()[::-1]
-            print ("order = {0}".format(order))
+            #print ("order = {0}".format(order))
             keep = [] #用来存放最终保留的bbx的索引信息 ## 依次从按confidence从高到低遍历bbx，移除所有与该矩形框的IOU值大于threshold的矩形框
             while order.size > 0:
                 i = order[0]
@@ -142,41 +151,48 @@ class ObjectWrapper():
                 yy2 = np.minimum(y2[i], y2[order[1:]])
                 inter = np.maximum(0.0, xx2-xx1+1) * np.maximum(0.0, yy2-yy1+1)
                 iou = inter/(areas[i]+areas[order[1:]]-inter)
-                print("iou = {0}".format(iou))
-                print(np.where(iou<=threshold)) #输出没有被移除的bbx索引（相对于iou向量的索引）
+                #print("iou = {0}".format(iou))
+                #print(np.where(iou<=threshold)) #输出没有被移除的bbx索引（相对于iou向量的索引）
                 indexs = np.where(iou<=threshold)[0] + 1 #获取保留下来的索引(因为没有计算与自身的IOU，所以索引相差１，需要加上)
-                print ("indexs = {0}".format(type(indexs)))
+                #print ("indexs = {0}".format(type(indexs)))
                 order = order[indexs] #更新保留下来的索引
-                print ("order = {0}".format(order))
+                #print ("order = {0}".format(order))
             bbox = bbox_array[keep]
             predicts_dict[object_name] = bbox.tolist()
             #predicts_dict = predicts_dict
         return predicts_dict
 
     def non_max_suppress_(self, predicts_dict, nms_tuple=(3, 5), threshold=0.7):
-        has_key1 = False
-        has_key2 = False
-        for key, value in predicts_dict.items():
-            if(key == nms_tuple[0]):
-                has_key1 = True
-            elif(key == nms_tuple[1]):
-                has_key2 = True
-        if((has_key1 == True) and (has_key2 == True)):
-            bbx_array = np.array(predicts_dict[nms_tuple[1]], dtype=np.float)
-            x1, y1, x2, y2, scores = bbx_array[:,0], bbx_array[:,1], bbx_array[:,2], bbx_array[:,3], bbx_array[:,4]
-            areas = (x2-x1+1) * (y2-y1+1)
-            keep = []
-            for bbx in predicts_dict[nms_tuple[0]]:
-                xx1 = np.maximum(bbx[0], x1)
-                yy1 = np.maximum(bbx[1], y1)
-                xx2 = np.minimum(bbx[2], x2)
-                yy2 = np.minimum(bbx[3], y2)
-                inter = np.maximum(0.0, xx2-xx1+1) * np.maximum(0.0, yy2-yy1+1)
-                iou = inter/((bbx[2]-bbx[0]+1)*(bbx[3]-bbx[1]+1)+areas-inter)
-                print('iou:{0}'.format(iou))
-                print('keep:{0}'.format(np.where(iou<=threshold))) #输出没有被移除的bbx索引（相对于iou向量的索引）
-                indexs = np.where(iou<=threshold)[0] #获取保留下来的索引
-                print('keep index:{0}'.format(indexs))
+            has_key1 = False
+            has_key2 = False
+            for key, value in predicts_dict.items():
+                if(key == nms_tuple[0]):
+                    has_key1 = True
+                elif(key == nms_tuple[1]):
+                    has_key2 = True
+            if((has_key1 == True) and (has_key2 == True)):
+                bbx_array = np.array(predicts_dict[nms_tuple[1]], dtype=np.float)
+                x1, y1, x2, y2, scores = bbx_array[:,0], bbx_array[:,1], bbx_array[:,2], bbx_array[:,3], bbx_array[:,4]
+                areas = (x2-x1+1) * (y2-y1+1)
+                keep = []
+                for bbx in predicts_dict[nms_tuple[0]]:
+                    xx1 = np.maximum(bbx[0], x1)
+                    yy1 = np.maximum(bbx[1], y1)
+                    xx2 = np.minimum(bbx[2], x2)
+                    yy2 = np.minimum(bbx[3], y2)
+                    inter = np.maximum(0.0, xx2-xx1+1) * np.maximum(0.0, yy2-yy1+1)
+                    iou = inter/((bbx[2]-bbx[0]+1)*(bbx[3]-bbx[1]+1)+areas-inter)
+                    print('iou:{0}'.format(iou))
+                    print('keep:{0}'.format(np.where(iou<=threshold))) #输出没有被移除的bbx索引（相对于iou向量的索引）
+                    indexs = np.where(iou>threshold)[0] #获取保留下来的索引
+                    print('keep index:{0}'.format(indexs))
+                    keep.append(indexs)
+                    print('keep:{0}'.format(keep))
+            #bbox = bbox_array[keep]
+            #predicts_dict[object_name] = bbox.tolist()
+            #predicts_dict = predicts_dict
+        #return predicts_dict
+
 
     def Detect(self, img, idx=0):
         """Send image for inference on a single compute stick
@@ -191,7 +207,7 @@ class ObjectWrapper():
         imgh = img.shape[0]
 
         im,offx,offy,xscale,yscale = self.PrepareImage(img, self.dim)
-        print('xscale = {}, yscale = {}'.format(xscale, yscale))
+        #print('xscale = {}, yscale = {}'.format(xscale, yscale))
 
         ObjectWrapper.graphHandle[idx].queue_inference_with_fifo_elem(
                 ObjectWrapper.fifoInHandle[idx],
@@ -200,28 +216,30 @@ class ObjectWrapper():
         out, userobj = ObjectWrapper.fifoOutHandle[idx].read_elem()
 
 ###################################################################
+        '''
         reshaped_out = out.reshape(13, 165, 13)
-        #print(reshaped_out)
         transposed_out = np.transpose(reshaped_out, (2, 0, 1))
-        #print(transposed_out.shape) #(13, 13, 165)
-        #print(transposed_out)
+        '''
+        reshaped_out = out.reshape(self.blockwd, 165, self.blockwd)
+        transposed_out = np.transpose(reshaped_out, (2, 0, 1))
+
 ###################################################################
 
-        transposed_out = transposed_out.reshape(165, 13, 13)
+        transposed_out = transposed_out.reshape(165, self.blockwd, self.blockwd)
         first_132 = transposed_out[:132]
-        first_132 = first_132.reshape(33,26,26)
+        first_132 = first_132.reshape(33,self.blockwd*2,self.blockwd*2)
         last_33 = transposed_out[132:]
         #print('layer23-conv:\n{0}'.format(first_132))
         #print('layer16-conv:\n{0}'.format(last_33))
 
 ###################################################################
         ###out = self.Reshape(out, self.dim)
-        out1 = last_33.reshape(13*13*33)
+        out1 = last_33.reshape(self.blockwd*self.blockwd*33)
         internalresults1 = self.detector.Detect(out1.astype(np.float32), 33, self.blockwd, self.blockwd, self.classes, imgw, imgh, self.threshold, self.nms, self.targetBlockwd)
         pyresults1 = [BBox(x,xscale,yscale, offx, offy) for x in internalresults1]
 
-        out2 = first_132.reshape(26*26*33)
-        internalresults2 = self.detector.Detect(out2.astype(np.float32), 33, 26, 26, self.classes, imgw, imgh, self.threshold, self.nms, 26)
+        out2 = first_132.reshape(self.blockwd*2*self.blockwd*2*33)
+        internalresults2 = self.detector.Detect(out2.astype(np.float32), 33, self.blockwd*2, self.blockwd*2, self.classes, imgw, imgh, self.threshold, self.nms, self.blockwd*2)
         pyresults2 = [BBox(x,xscale,yscale, offx, offy) for x in internalresults2]
         pyresults3 = pyresults1 + pyresults2
 
@@ -243,19 +261,22 @@ class ObjectWrapper():
         #--list_key = np.arange(6)
         #--predict_dicts = dict(zip(list_key, list_all))
         #--print('predict_dicts:{0}'.format(predict_dicts))
-        print('pre_dic:{0}'.format(pre_dic))
+        #print('pre_dic:{0}'.format(pre_dic))
         nms_pred_dict = self.non_max_suppress(pre_dic)
-        print('nmsed_dict:{0}'.format(nms_pred_dict))
+        #print('nmsed_dict:{0}'.format(nms_pred_dict))
         if(nms_pred_dict == None):
             return []
-        self.non_max_suppress_(nms_pred_dict)
+        ##-------------------------test start
+        #self.non_max_suppress_(nms_pred_dict)
+        ##-------------------------test end
+
         nmsed_between_layer_results = []
         for object_id, bboxes in nms_pred_dict.items():
-            print('object_id:{0}'.format(object_id))
-            print('bboxes:{0}'.format(bboxes))
+            #print('object_id:{0}'.format(object_id))
+            #print('bboxes:{0}'.format(bboxes))
             for bbox in bboxes:
                 bbox.append(object_id)
-                print('bbox:{0}'.format(bbox))
+                #print('bbox:{0}'.format(bbox))
                 BBox__ = BBox_(bbox, xscale, yscale, offx, offy)
                 nmsed_between_layer_results.append(BBox__)
 
