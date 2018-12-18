@@ -571,8 +571,8 @@ layer {
     shape {
       dim: 0
       dim: 132
-      dim: 13
-      dim: 13
+      dim: 9
+      dim: 9
     }
   }
 }
@@ -594,8 +594,8 @@ layer {
   reshape_param {
     shape {
       dim: 0
-      dim: 13
-      dim: 13
+      dim: 9
+      dim: 9
       dim: 165
     }
   }
