@@ -8,7 +8,7 @@
 using namespace std;
 namespace bp = boost::python;
 
-#define DEBUG
+//#define DEBUG
 class YoloDetector
 {
 private:

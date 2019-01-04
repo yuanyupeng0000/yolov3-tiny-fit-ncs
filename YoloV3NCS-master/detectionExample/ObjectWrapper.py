@@ -276,7 +276,7 @@ class ObjectWrapper():
             #print('bboxes:{0}'.format(bboxes))
             for bbox in bboxes:
                 bbox.append(object_id)
-                #print('bbox:{0}'.format(bbox))
+                print('bbox:{0}'.format(bbox))
                 BBox__ = BBox_(bbox, xscale, yscale, offx, offy)
                 nmsed_between_layer_results.append(BBox__)
 

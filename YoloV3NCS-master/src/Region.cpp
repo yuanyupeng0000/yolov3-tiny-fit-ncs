@@ -7,19 +7,16 @@
 #include <cmath>
 #include <vector>
 #include <string>
-
+//10,25,  20,50,  30,75, 50,125,  80,200,  150, 150 refined-anchors
 //10,14,  23,27,  37,58,  81,82,  135,169,  344,319 yolov3-tiny
-//const int N = 5;
-//const float biases[N*2] = {1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52};
-//const float biases[N*2] = {0.57273, 0.677385, 1.87446, 2.06253, 3.33843, 5.47434, 7.88282, 3.52778, 9.77052, 9.16828};
+
 //const std::string objectnames[] = { "aeroplane","bicycle","bird","boat","bottle","bus","car","cat","chair","cow","diningtable","dog","horse","motorbike","person","pottedplant","sheep","sofa","train","tvmonitor"};
 
 const int N = 3;
-//const float biases[N*2] = {1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52};
-const float biases1[N*2] = {81,82,  135,169,  344,319};
-//const float biases[N*2] = {41,42,  67,84,  172,159};
-const float biases2[N*2] = {21,22,  34,42,  86,80};
-//const float biases2[N*2] = {10,14,  23,27,  37,58};
+//const float biases1[N*2] = {81,82,  135,169,  344,319};
+//const float biases2[N*2] = {21,27,  34,52,  86,100};
+const float biases1[N*2] = {50,125,  80,200,  150,150};
+const float biases2[N*2] = {10,25,  20,50,  30,75};
 const std::string objectnames[] = {"bus","car", "truck", "motorbike", "bicycle","person"};
 
 Region::Region()
@@ -94,21 +91,41 @@ void Region::GetDetections(float* data, int c, int h, int w,
                     boxes[i].w = exp(output[index + 2]) * biases2[2*n]   / 416; //w;
                     boxes[i].h = exp(output[index + 3]) * biases2[2*n+1] / 416; //h;
                 }
+                else if(blockwd == 9)
+                {
+                    boxes[i].w = exp(output[index + 2]) * biases1[2*n]   / 288; //w;
+                    boxes[i].h = exp(output[index + 3]) * biases1[2*n+1] / 288; //h;
+                }
+                else if(blockwd == 18)
+                {
+                    boxes[i].w = exp(output[index + 2]) * biases2[2*n]   / 288; //w;
+                    boxes[i].h = exp(output[index + 3]) * biases2[2*n+1] / 288; //h;
+                }
 
+                else if(blockwd == 11)
+                {
+                    boxes[i].w = exp(output[index + 2]) * biases1[2*n]   / 352; //w;
+                    boxes[i].h = exp(output[index + 3]) * biases1[2*n+1] / 352; //h;
+                }
+                else if(blockwd == 22)
+                {
+                    boxes[i].w = exp(output[index + 2]) * biases2[2*n]   / 352; //w;
+                    boxes[i].h = exp(output[index + 3]) * biases2[2*n+1] / 352; //h;
+                }
 		//Scale
 		output[index + 4] = logistic_activate(output[index + 4]);
 
 		//Class Probability
-        for(int i=1; i<classes+1; i++)
-        {
-            output[index + 4 + i] = logistic_activate(output[index + 4 + i]);
-        }
+		for(int i=1; i<classes+1; i++)
+		{
+		    output[index + 4 + i] = logistic_activate(output[index + 4 + i]);
+		}
                 
-		////softmax(&output[index + 5], classes, 1, &output[index + 5]);
+		///softmax(&output[index + 5], classes, 1, &output[index + 5]);
 		for(j = 0; j < classes; ++j)
 		{
-            output[index+5+j] *= output[index+4]; //--classprob = objectnessprob * classprob
-			if(output[index+5+j] < thresh) output[index+5+j] = 0;
+                    output[index+5+j] *= output[index+4]; //--classprob = objectnessprob * classprob
+		    if(output[index+5+j] < thresh) output[index+5+j] = 0;
 		}
 	}
 
@@ -143,12 +160,14 @@ void Region::GetDetections(float* data, int c, int h, int w,
 		{
 			ibox b = boxes[i];
 
-            printf("%f %f %f %f\n", b.x, b.y, b.w, b.h);
+                        //printf("%f %f %f %f\n", b.x, b.y, b.w, b.h);
 
 			int left  = (b.x-b.w/2.)*imgw;
 			int right = (b.x+b.w/2.)*imgw;
 			int top   = (b.y-b.h/2.)*imgh;
 			int bot   = (b.y+b.h/2.)*imgh;
+                        
+                        //printf("%d %d\n", right-left, bot-top);
 
 			if(left < 0) left = 0;
 			if(right > imgw-1) right = imgw-1;
