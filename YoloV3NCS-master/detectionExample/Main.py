@@ -24,21 +24,25 @@ if __name__ == '__main__':
 
     if sys.argv[1] == '--image':
         # image preprocess
-        img = cv2.imread(imagefile)
-        start = datetime.now()
+        images_id = os.listdir(imagefile)
+        os.system('mkdir temp')
+        for i in images_id:
+             image = imagefile + '/' + i
+             img = cv2.imread(image)
+             start = datetime.now()
 
-        results = detector.Detect(img)
-        print(results)
+             results = detector.Detect(img)
+             print(results)
 
-        end = datetime.now()
-        elapsedTime = end-start
+             end = datetime.now()
+             elapsedTime = end-start
 
-        print ('total time is " milliseconds', elapsedTime.total_seconds()*1000)
+             print ('total time is " milliseconds', elapsedTime.total_seconds()*1000)
 
-        imdraw = Visualize(img, results)
-        cv2.imshow('Demo',imdraw)
-        cv2.imwrite('test.jpg',imdraw)
-        cv2.waitKey(10000)
+             imdraw = Visualize(img, results)
+             #cv2.imshow('Demo',imdraw)
+             cv2.imwrite('temp/' + i ,imdraw)
+             #cv2.waitKey(10000)
     elif sys.argv[1] == '--video':
         # video preprocess
         cap = cv2.VideoCapture(videofile)
@@ -52,7 +56,9 @@ if __name__ == '__main__':
                 seconds = end - start
                 fps = 1 / seconds
                 imdraw = Visualize(img, results)
-                fpsImg = cv2.putText(imdraw, "%.2ffps" % fps, (70, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 0), 1)
+                if(imdraw.shape[0] >= 900 or imdraw.shape[1] >= 1440):
+                    imdraw = cv2.resize(imdraw, (int(imdraw.shape[1]/2), int(imdraw.shape[0]/2)))
+                fpsImg = cv2.putText(imdraw, "%.2ffps" % fps, (70, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1)
                 cv2.imshow('Demo',fpsImg)
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     break

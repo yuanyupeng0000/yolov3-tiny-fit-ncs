@@ -2,7 +2,8 @@ from libpydetector import YoloDetector
 import os, io, numpy, time
 import numpy as np
 from mvnc import mvncapi as mvnc
-from skimage.transform import resize
+#from skimage.transform import resize
+import cv2
 labels = ["bus","car", "truck", "motorbike", "bicycle","person"]
 class BBox(object):
     def __init__(self, bbox, xscale, yscale, offx, offy):
@@ -64,7 +65,7 @@ class ObjectWrapper():
         self.wh = self.blockwd*self.blockwd
         self.targetBlockwd = int(self.dim[0]/32)
         self.classes = 6
-        self.threshold = 0.3
+        self.threshold = 0.4
         self.nms = 0.45
 
 
@@ -76,7 +77,6 @@ class ObjectWrapper():
             ObjectWrapper.devHandle[i].close()
 
     def PrepareImage(self, img, dim):
-
         '''
         imgw = img.shape[1]
         imgh = img.shape[0]
@@ -92,8 +92,9 @@ class ObjectWrapper():
         offx = int((dim[0] - neww)/2)
         offy = int((dim[1] - newh)/2)
 
-        imgb[offy:offy+newh,offx:offx+neww,:] = resize(img.copy()/255.0,(newh,neww),1)
+        imgb[offy:offy+newh,offx:offx+neww,:] = cv2.resize(img/255.0,(neww,newh))
         im = imgb[:,:,(2,1,0)]
+        return im, int(offx*imgw/neww), int(offy*imgh/newh), neww/dim[0], newh/dim[1]
         '''
         
         imgw = img.shape[1]
@@ -109,11 +110,10 @@ class ObjectWrapper():
         offx = int((dim[0] - neww)/2)
         offy = int((dim[1] - newh)/2)
 
-        imgb[offy:offy+newh,offx:offx+neww,:] = resize(img.copy()/255.0,(newh,neww),1)
-        im = imgb[:,:,(2,1,0)]       
-
+        imgb[offy:offy+newh,offx:offx+neww,:] = cv2.resize(img/255.0,(newh,neww))
+        im = imgb[:,:,(2,1,0)]
         return im, int(offx*imgw/neww), int(offy*imgh/newh), neww/dim[0], newh/dim[1]
-        #return transposed_img, int(offx*imgw/neww), int(offy*imgh/newh), neww/dim[0], newh/dim[1]
+                      
 
     def Reshape(self, out, dim):
         shape = out.shape
