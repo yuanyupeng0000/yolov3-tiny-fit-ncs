@@ -215,22 +215,21 @@ class ObjectWrapper():
                 im.astype(np.float32), 'user object')
         out, userobj = ObjectWrapper.fifoOutHandle[idx].read_elem()
 
-###################################################################
-        '''
-        reshaped_out = out.reshape(13, 165, 13)
-        transposed_out = np.transpose(reshaped_out, (2, 0, 1))
-        '''
+##################################################################
+
         reshaped_out = out.reshape(self.blockwd, 165, self.blockwd)
         transposed_out = np.transpose(reshaped_out, (2, 0, 1))
 
-###################################################################
+##################################################################
 
         transposed_out = transposed_out.reshape(165, self.blockwd, self.blockwd)
         first_132 = transposed_out[:132]
         first_132 = first_132.reshape(33,self.blockwd*2,self.blockwd*2)
         last_33 = transposed_out[132:]
-        #print('layer23-conv:\n{0}'.format(first_132))
-        #print('layer16-conv:\n{0}'.format(last_33))
+        #print(first_132.shape)
+        #print(first_132)
+        #print(last_33.shape)
+        #print(last_33)
 
 ###################################################################
         ###out = self.Reshape(out, self.dim)
@@ -240,6 +239,9 @@ class ObjectWrapper():
 
         out2 = first_132.reshape(self.blockwd*2*self.blockwd*2*33)
         internalresults2 = self.detector.Detect(out2.astype(np.float32), 33, self.blockwd*2, self.blockwd*2, self.classes, imgw, imgh, self.threshold, self.nms, self.blockwd*2)
+
+####################################################################
+
         pyresults2 = [BBox(x,xscale,yscale, offx, offy) for x in internalresults2]
         pyresults3 = pyresults1 + pyresults2
 
@@ -276,7 +278,7 @@ class ObjectWrapper():
             #print('bboxes:{0}'.format(bboxes))
             for bbox in bboxes:
                 bbox.append(object_id)
-                print('bbox:{0}'.format(bbox))
+                #print('bbox:{0}'.format(bbox))
                 BBox__ = BBox_(bbox, xscale, yscale, offx, offy)
                 nmsed_between_layer_results.append(BBox__)
 

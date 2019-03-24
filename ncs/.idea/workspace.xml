@@ -29,10 +29,7 @@
       <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_darknet.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_darknet.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_lite.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileNet-YOLO-master/train_yolov3_lite.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../YoloV3NCS-master/detectionExample/ObjectWrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/../YoloV3NCS-master/detectionExample/ObjectWrapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convert_tools/learn-convert-yolov32caffe.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/convert_tools/learn-convert-yolov32caffe.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/convert_tools/output_expected.npy" beforeDir="false" afterPath="$PROJECT_DIR$/convert_tools/output_expected.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize_tools/.ipynb_checkpoints/visualization_caffe-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/visualize_tools/.ipynb_checkpoints/visualization_caffe-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize_tools/visualization_caffe.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/visualize_tools/visualization_caffe.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +42,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
+            <state relative-caret-position="165">
               <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
             </state>
           </provider>
@@ -165,10 +162,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1355" height="836" extended-state="0" />
+    <frame x="65" y="24" width="1355" height="836" extended-state="1" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28625095" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17430504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" weight="0.32909605" />
       <window_info anchor="bottom" id="Python Console" weight="0.32909605" />
@@ -203,7 +200,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/convert_tools/yolov3-tiny-ncs-convert-weights-2-caffemodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
+        <state relative-caret-position="165">
           <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
         </state>
       </provider>
