@@ -65,8 +65,13 @@ class ObjectWrapper():
         self.wh = self.blockwd*self.blockwd
         self.targetBlockwd = int(self.dim[0]/32)
         self.classes = 6
+<<<<<<< HEAD
         self.threshold = 0.1
         self.nms = 0.75
+=======
+        self.threshold = 0.4
+        self.nms = 0.45
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
 
 
     def __del__(self):

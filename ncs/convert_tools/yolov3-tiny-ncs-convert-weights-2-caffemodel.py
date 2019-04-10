@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import sys, datetime
 sys.path.insert(0, '/data/ssd-caffe/new-yolov3-caffe/python') #caffe-py2.7
+=======
+import sys, datetime  
+#sys.path.insert(0, '/data/ssd-caffe/py2_caffe/python') 
+sys.path.insert(0, '/data/ssd-caffe/new-yolov3-caffe/python')
+>>>>>>> cfc2a59d08f8d0545d34c83921b843e1236eb00d
 import caffe  
 import numpy as np  
 from collections import OrderedDict

@@ -1,11 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-
 from libpydetector import YoloDetector
 import os, io, numpy, time
 import numpy as np
 from mvnc import mvncapi as mvnc
-#from skimage.transform import resize
 import cv2
 labels = ["bus","car", "truck", "motorbike", "bicycle","person"]
 class BBox(object):
@@ -197,7 +195,6 @@ class ObjectWrapper():
             #predicts_dict[object_name] = bbox.tolist()
             #predicts_dict = predicts_dict
         #return predicts_dict
-
 
     def Detect(self, img, idx=0):
         """Send image for inference on a single compute stick
