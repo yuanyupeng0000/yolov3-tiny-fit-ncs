@@ -107,8 +107,8 @@ void ParseYOLOV3Output(const CNNLayerPtr &layer, const Blob::Ptr &blob, const un
                        const unsigned long original_im_w,
                        const double threshold, std::vector<DetectionObject> &objects) {
     // --------------------------- Validating output parameters -------------------------------------
-    if (layer->type != "RegionYolo")
-        throw std::runtime_error("Invalid output type: " + layer->type + ". RegionYolo expected");
+    /*if (layer->type != "RegionYolo")
+        throw std::runtime_error("Invalid output type: " + layer->type + ". RegionYolo expected");*/
     const int out_blob_h = static_cast<int>(blob->getTensorDesc().getDims()[2]);
     const int out_blob_w = static_cast<int>(blob->getTensorDesc().getDims()[3]);
     if (out_blob_h != out_blob_w)
@@ -116,21 +116,26 @@ void ParseYOLOV3Output(const CNNLayerPtr &layer, const Blob::Ptr &blob, const un
         " It should be in NCHW layout and H should be equal to W. Current H = " + std::to_string(out_blob_h) +
         ", current W = " + std::to_string(out_blob_h));
     // --------------------------- Extracting layer parameters -------------------------------------
-    auto num = layer->GetParamAsInt("num");
+    /*auto num = layer->GetParamAsInt("num");
     try { num = layer->GetParamAsInts("mask").size(); } catch (...) {}
     auto coords = layer->GetParamAsInt("coords");
     auto classes = layer->GetParamAsInt("classes");
-    std::vector<float> anchors = {10.0, 13.0, 16.0, 30.0, 33.0, 23.0, 30.0, 61.0, 62.0, 45.0, 59.0, 119.0, 116.0, 90.0,
-                                  156.0, 198.0, 373.0, 326.0};
+    */
+    int num = 3;
+    int coords = 4;
+    int classes = 6;
+    //std::vector<float> anchors = {10.0, 13.0, 16.0, 30.0, 33.0, 23.0, 30.0, 61.0, 62.0, 45.0, 59.0, 119.0, 116.0, 90.0,
+    //                             156.0, 198.0, 373.0, 326.0};
+    std::vector<float> anchors = {10,25,  20,50,  30,75, 50,125,  80,200,  150,150};
     try { anchors = layer->GetParamAsFloats("anchors"); } catch (...) {}
     auto side = out_blob_h;
     int anchor_offset = 0;
     switch (side) {
         case yolo_scale_13:
-            anchor_offset = 2 * 6;
+            anchor_offset = 2 * 3; //2 * 6;
             break;
         case yolo_scale_26:
-            anchor_offset = 2 * 3;
+            anchor_offset = 2 * 0; //2 * 3;
             break;
         case yolo_scale_52:
             anchor_offset = 2 * 0;
@@ -270,9 +275,9 @@ int main(int argc, char *argv[]) {
         // --------------------------------- Preparing output blobs -------------------------------------------
         slog::info << "Checking that the outputs are as the demo expects" << slog::endl;
         OutputsDataMap outputInfo(netReader.getNetwork().getOutputsInfo());
-        if (outputInfo.size() != 3) {
+        /*if (outputInfo.size() != 3) {
             throw std::logic_error("This demo only accepts networks with three layers");
-        }
+        }*/
         for (auto &output : outputInfo) {
             output.second->setPrecision(Precision::FP32);
             output.second->setLayout(Layout::NCHW);

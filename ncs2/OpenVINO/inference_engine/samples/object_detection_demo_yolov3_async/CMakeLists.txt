@@ -1,6 +1,12 @@
-# Copyright (C) 2018 Intel Corporation
 # SPDX-License-Identifier: Apache-2.0
 #
+# --------------------------------------------------------------------------------------------------------------------
+SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
+include_directories(/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/include)
+include_directories(/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/samples/common)
+include_directories(/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/src/extension)
+link_directories(/opt/intel/computer_vision_sdk/inference_engine/lib/ubuntu_16.04/intel64)
+# ---------------------------------------------------------------------------------------------------------------------
 
 cmake_minimum_required(VERSION 2.8)
 
@@ -37,7 +43,8 @@ set_target_properties(${TARGET_NAME} PROPERTIES "CMAKE_CXX_FLAGS" "${CMAKE_CXX_F
         COMPILE_PDB_NAME ${TARGET_NAME})
 
 
-target_link_libraries(${TARGET_NAME} IE::ie_cpu_extension ${InferenceEngine_LIBRARIES} gflags ${OpenCV_LIBRARIES})
+#target_link_libraries(${TARGET_NAME} IE::ie_cpu_extension ${InferenceEngine_LIBRARIES} gflags ${OpenCV_LIBRARIES})
+target_link_libraries(${TARGET_NAME} ${InferenceEngine_LIBRARIES} clDNNPlugin GNAPlugin inference_engine myriadPlugin MKLDNNPlugin HeteroPlugin HDDLPlugin cpu_extension_avx2 cpu_extension_sse4 gflags ${OpenCV_LIBRARIES} dl)
 
 if(UNIX)
     target_link_libraries( ${TARGET_NAME} ${LIB_DL} pthread)
