@@ -2,10 +2,14 @@
 #
 # --------------------------------------------------------------------------------------------------------------------
 SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
-include_directories(/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/include)
-include_directories(/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/samples/common)
-include_directories(/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/src/extension)
+include_directories(/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/include)
+include_directories(/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/samples/common)
+include_directories(/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/common)
+include_directories(/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/src/extension)
 link_directories(/opt/intel/computer_vision_sdk/inference_engine/lib/ubuntu_16.04/intel64)
+link_directories(/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/lib/ubuntu_16.04/intel64)
+link_directories(/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/external/omp/lib)
+link_directories(/home/yyp/inference_engine_samples_build/intel64/Release/lib)
 # ---------------------------------------------------------------------------------------------------------------------
 
 cmake_minimum_required(VERSION 2.8)

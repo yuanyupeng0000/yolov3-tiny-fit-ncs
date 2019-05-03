@@ -25,6 +25,7 @@
 #include <samples/slog.hpp>
 
 #include "object_detection_demo_yolov3_async.hpp"
+#include "Common.h"
 
 #include <ext_list.hpp>
 
@@ -152,6 +153,7 @@ void ParseYOLOV3Output(const CNNLayerPtr &layer, const Blob::Ptr &blob, const un
         for (int n = 0; n < num; ++n) {
             int obj_index = EntryIndex(side, coords, classes, n * side * side + i, coords);
             int box_index = EntryIndex(side, coords, classes, n * side * side + i, 0);
+            #if 0
             float scale = output_blob[obj_index];
             if (scale < threshold)
                 continue;
@@ -159,6 +161,7 @@ void ParseYOLOV3Output(const CNNLayerPtr &layer, const Blob::Ptr &blob, const un
             double y = (row + output_blob[box_index + 1 * side_square]) / side * resized_im_h;
             double height = std::exp(output_blob[box_index + 3 * side_square]) * anchors[anchor_offset + 2 * n + 1];
             double width = std::exp(output_blob[box_index + 2 * side_square]) * anchors[anchor_offset + 2 * n];
+            
             for (int j = 0; j < classes; ++j) {
                 int class_index = EntryIndex(side, coords, classes, n * side_square + i, coords + 1 + j);
                 float prob = scale * output_blob[class_index];
@@ -169,6 +172,26 @@ void ParseYOLOV3Output(const CNNLayerPtr &layer, const Blob::Ptr &blob, const un
                         static_cast<float>(original_im_w) / static_cast<float>(resized_im_w));
                 objects.push_back(obj);
             }
+            #else
+            float scale = logistic_activate(output_blob[obj_index]);
+            if (scale < threshold)
+                continue;
+            double x = (col + logistic_activate(output_blob[box_index + 0 * side_square])) / side * resized_im_w;
+            double y = (row + logistic_activate(output_blob[box_index + 1 * side_square])) / side * resized_im_h;
+            double height = std::exp(output_blob[box_index + 3 * side_square]) * anchors[anchor_offset + 2 * n + 1];
+            double width = std::exp(output_blob[box_index + 2 * side_square]) * anchors[anchor_offset + 2 * n];
+            
+            for (int j = 0; j < classes; ++j) {
+                int class_index = EntryIndex(side, coords, classes, n * side_square + i, coords + 1 + j);
+                float prob = scale * output_blob[class_index];
+                if (prob < threshold)
+                    continue;
+                DetectionObject obj(x, y, height, width, j, prob,
+                        static_cast<float>(original_im_h) / static_cast<float>(resized_im_h),
+                        static_cast<float>(original_im_w) / static_cast<float>(resized_im_w));
+                objects.push_back(obj);
+            }
+            #endif
         }
     }
 }
