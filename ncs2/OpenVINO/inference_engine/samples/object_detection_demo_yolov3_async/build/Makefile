@@ -123,6 +123,33 @@ object_detection_demo_yolov3_async/fast:
 	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/build
 .PHONY : object_detection_demo_yolov3_async/fast
 
+Common.o: Common.cpp.o
+
+.PHONY : Common.o
+
+# target to build an object file
+Common.cpp.o:
+	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o
+.PHONY : Common.cpp.o
+
+Common.i: Common.cpp.i
+
+.PHONY : Common.i
+
+# target to preprocess a source file
+Common.cpp.i:
+	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.i
+.PHONY : Common.cpp.i
+
+Common.s: Common.cpp.s
+
+.PHONY : Common.s
+
+# target to generate assembly for a file
+Common.cpp.s:
+	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.s
+.PHONY : Common.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... object_detection_demo_yolov3_async"
+	@echo "... Common.o"
+	@echo "... Common.i"
+	@echo "... Common.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

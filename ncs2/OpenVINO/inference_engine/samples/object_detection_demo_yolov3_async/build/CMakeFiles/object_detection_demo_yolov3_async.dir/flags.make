@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -O3
 
 CXX_DEFINES = -DOPENCV_TRAITS_ENABLE_DEPRECATED
 
-CXX_INCLUDES = -I/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/include -I/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/samples/common -I/opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/inference_engine/src/extension -isystem /usr/local/include -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/include -I/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/samples/common -I/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/common -I/opt/intel/computer_vision_sdk/deployment_tools/inference_engine/src/extension -isystem /usr/local/include -isystem /usr/local/include/opencv 
 
