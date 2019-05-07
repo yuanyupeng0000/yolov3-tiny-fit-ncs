@@ -1,0 +1,10 @@
+[18:9:29][info](camera_service.c:432)====>ok to open net camera  sdk
+[18:9:29][camera_msg](client_net.c:434)====>cam 0, port 5000,name admin,ip 192.168.1.95
+[18:9:29][camera_msg](camera_service.c:243)====>open camera 0
+alg malloc ok 
+init ok
+finding ...
+can't find .py|---->>>>get sig 11
+[18:9:30][info](common.c:397)====> err================================>seg fault,restart system
+
+[18:9:30][info](common.c:445)====>calling exit@@@@@@@@@@@@@@@@@@@@

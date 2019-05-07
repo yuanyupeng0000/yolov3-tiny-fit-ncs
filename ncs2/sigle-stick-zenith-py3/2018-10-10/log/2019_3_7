@@ -1,0 +1,168 @@
+[15:5:45][info](camera_service.c:432)====>ok to open net camera  sdk
+[15:5:45][camera_msg](client_net.c:434)====>cam 0, port 5000,name admin,ip 192.168.1.95
+[15:5:45][camera_msg](camera_service.c:243)====>open camera 0
+[15:6:26][info](camera_service.c:432)====>ok to open net camera  sdk
+[15:6:26][camera_msg](client_net.c:434)====>cam 0, port 5000,name admin,ip 192.168.1.95
+[15:6:26][camera_msg](camera_service.c:243)====>open camera 0
+[15:6:34][info](camera_service.c:288)====>creating thread ............................
+[15:6:34][server](tcp_server.c:159)====>waiting for clients 
+[15:6:35][debug_sig](sig_service.c:748)====>connecting 
+[15:6:35][info](camera_service.c:220)====>##process alg  done10000
+[15:6:36][debug_sig](sig_service.c:728)====>try to connect signal machine,192.168.1.35
+[15:6:36][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:36][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:36][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:36][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:3
+[15:6:36][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[15:6:36][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[15:6:36][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:36][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:36][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:36][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[15:6:36][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+[15:6:36][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[15:6:37][info](camera_service.c:220)====>##process alg  done20000
+[15:6:38][info](camera_service.c:220)====>##process alg  done30000
+[15:6:40][info](camera_service.c:220)====>##process alg  done40000
+[15:6:41][info](camera_service.c:220)====>##process alg  done50000
+[15:6:43][info](camera_service.c:220)====>##process alg  done60000
+[15:6:44][info](camera_service.c:220)====>##process alg  done70000
+[15:6:46][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:46][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:46][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:27
+[15:6:46][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:46][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[15:6:46][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[15:6:46][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:46][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:46][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[15:6:46][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:46][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[15:6:46][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+[15:6:46][info](camera_service.c:220)====>##process alg  done80000
+[15:6:48][info](camera_service.c:220)====>##process alg  done90000
+[15:6:50][info](camera_service.c:220)====>##process alg  done100000
+[15:6:51][info](camera_service.c:220)====>##process alg  done110000
+[15:6:53][info](camera_service.c:220)====>##process alg  done120000
+[15:6:55][info](camera_service.c:220)====>##process alg  done130000
+[15:6:56][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:56][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:27
+[15:6:56][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:56][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:56][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[15:6:56][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:56][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[15:6:56][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:56][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[15:6:56][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[15:6:56][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:6:56][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+[15:6:57][info](camera_service.c:220)====>##process alg  done140000
+[15:6:58][info](camera_service.c:220)====>##process alg  done150000
+[15:7:0][info](camera_service.c:220)====>##process alg  done160000
+[15:7:0][info](client_net.c:281)====>get index 0
+[15:7:0][clients_msg](client_net.c:87)====>add client :192.168.1.35, index 0  
+[15:7:0][clients_msg](client_net.c:88)====>total num of clients is 1
+[15:7:0][server](tcp_server.c:176)====>    clients  done 
+[15:7:0][server](tcp_server.c:159)====>waiting for clients 
+[15:7:1][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:1][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:2][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:2][info](camera_service.c:220)====>##process alg  done170000
+[15:7:2][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:3][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:4][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:4][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:5][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:6][info](camera_service.c:220)====>##process alg  done180000
+[15:7:6][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:6][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:6][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:31
+[15:7:6][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:6][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:6][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:6][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[15:7:6][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:6][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[15:7:6][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:6][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[15:7:6][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[15:7:6][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+[15:7:7][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:7][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:8][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:8][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:9][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:9][info](camera_service.c:220)====>##process alg  done190000
+[15:7:10][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:10][server](tcp_server.c:176)====>    clients  done 
+[15:7:10][server](tcp_server.c:159)====>waiting for clients 
+[15:7:11][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:11][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:12][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:12][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:13][info](camera_service.c:220)====>##process alg  done200000
+[15:7:13][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:14][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:14][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:15][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:16][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:16][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:16][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:16][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:16][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[15:7:16][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:16][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[15:7:16][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[15:7:16][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:16][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[15:7:16][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+[15:7:16][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:16][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:36
+[15:7:17][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:17][info](camera_service.c:220)====>##process alg  done210000
+[15:7:17][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:18][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:19][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:19][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:20][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:20][server](tcp_server.c:176)====>    clients  done 
+[15:7:20][server](tcp_server.c:159)====>waiting for clients 
+[15:7:21][info](camera_service.c:220)====>##process alg  done220000
+[15:7:21][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:22][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:23][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:23][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:24][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:25][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:25][info](camera_service.c:220)====>##process alg  done230000
+[15:7:26][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:26][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:26][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:26][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:26][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:26][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[15:7:26][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+[15:7:26][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[15:7:26][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:26][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[15:7:26][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[15:7:26][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:37
+[15:7:26][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[15:7:26][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:27][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:28][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:29][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:30][info](camera_service.c:220)====>##process alg  done240000
+[15:7:30][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:30][server](tcp_server.c:176)====>    clients  done 
+[15:7:30][server](tcp_server.c:159)====>waiting for clients 
+[15:7:31][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:32][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:7:32][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.35
+[15:17:45][info](camera_service.c:432)====>ok to open net camera  sdk
+[15:17:45][camera_msg](client_net.c:434)====>cam 0, port 5000,name admin,ip 192.168.1.95
+[15:17:45][camera_msg](camera_service.c:243)====>open camera 0
+[15:17:51][info](camera_service.c:432)====>ok to open net camera  sdk
+[15:17:51][camera_msg](client_net.c:434)====>cam 0, port 5000,name admin,ip 192.168.1.95
+[15:17:51][camera_msg](camera_service.c:243)====>open camera 0

@@ -1,0 +1,3776 @@
+[16:7:38][info](camera_service.c:432)====>ok to open net camera  sdk
+[16:7:38][camera_msg](client_net.c:434)====>cam 0, port 5000,name admin,ip 192.168.1.95
+[16:7:38][camera_msg](camera_service.c:243)====>open camera 0
+alg malloc ok 
+init ok
+finding ...
+py found
+Load NCS devices ok！ NCS num =1
+ncs_id =0
+192.168.1.95 admin admin 5000
+log in server okk
+---------> 192.168.1.95 
+hSocket = 15
+open chnel okk
+[16:7:45][info](camera_service.c:288)====>creating thread ............................
+######################### port: 7080 
+ ######################### sockfd: 16 
+ [16:7:45][server](tcp_server.c:159)====>waiting for clients 
+[16:7:45][debug_sig](sig_service.c:692)====>connecting 
+[16:7:45][info](camera_service.c:220)====>##process alg  done10000
+[16:7:45][info](client_net.c:281)====>get index 0
+######################### port: 7221 
+ ######################### sockfd: 20 
+ [16:7:45][clients_msg](client_net.c:87)====>add client :192.168.1.166, index 0  
+[16:7:45][clients_msg](client_net.c:88)====>total num of clients is 1
+[16:7:45][server](tcp_server.c:176)====>    clients  done 
+[16:7:45][server](tcp_server.c:159)====>waiting for clients 
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =32,tail = 60,density =24
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:46][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+nboxes = 1
+person num = 0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =23,tail = 37,density =37
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+[16:7:46][debug_sig](sig_service.c:672)====>try to connect signal machine,192.168.1.35
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =20,tail = 31,density =44
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =816,tail = 27,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =19,tail = 25,density =38
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =19,tail = 21,density =20
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:47][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =816,tail = 27,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:7:48][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:48][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:48][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:9
+[16:7:48][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:48][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[16:7:48][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[16:7:48][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:48][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[16:7:48][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:48][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:48][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[16:7:48][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:48][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:50][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:51][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+[16:7:51][info](camera_service.c:220)====>##process alg  done20000
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =57,tail = 126,density =11
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =41,tail = 72,density =15
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =34,tail = 52,density =17
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:52][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,0,0,6] head =66,tail = 233,density =12
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =27,tail = 40,density =24
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =816,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =60,tail = 180,density =12
+coil 1 [0,0,0,6], coil 2 [0,0,0,0] head =23,tail = 32,density =31
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =816,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =50,tail = 126,density =14
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 27,density =45
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =816,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =45,tail = 103,density =16
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 22,density =23
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =816,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =41,tail = 86,density =17
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:53][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =39,tail = 72,density =17
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =33,tail = 60,density =21
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =31,tail = 50,density =20
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =29,tail = 44,density =22
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [1,6,52,0], coil 2 [1,6,60,6] head =27,tail = 40,density =24
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,8], coil 2 [1,6,60,6] head =25,tail = 35,density =24
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:54][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [1,6,52,8], coil 2 [1,6,60,6] head =23,tail = 32,density =27
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+nboxes = 2
+person num = 0
+coil 1 [2,6,52,8], coil 2 [1,6,60,6] head =22,tail = 31,density =34
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:7:55][server](tcp_server.c:176)====>    clients  done 
+[16:7:55][server](tcp_server.c:159)====>waiting for clients 
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [2,6,24,8], coil 2 [1,6,60,6] head =21,tail = 816,density =44
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [2,6,24,8], coil 2 [1,6,60,6] head =19,tail = 816,density =51
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:56][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de err decode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [2,6,24,8], coil 2 [1,6,60,6] head =19,tail = 816,density =45
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [1,6,60,6] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [2,6,24,8], coil 2 [1,6,60,6] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:57][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:7:58][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:58][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[16:7:58][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:58][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[16:7:58][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:58][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:40
+[16:7:58][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:58][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:58][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[16:7:58][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:7:58][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[16:7:58][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:58][info](camera_service.c:220)====>##process alg  done30000
+[16:7:58][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [2,6,24,8], coil 2 [2,6,60,4] head =26,tail = 39,density =24
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:7:59][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [2,6,24,4], coil 2 [2,6,60,4] head =25,tail = 35,density =26
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [2,6,24,4], coil 2 [2,6,60,4] head =23,tail = 32,density =31
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,24,4], coil 2 [2,6,60,4] head =21,tail = 29,density =33
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [3,6,27,4], coil 2 [2,6,60,4] head =20,tail = 27,density =35
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [3,6,27,4], coil 2 [2,6,60,4] head =19,tail = 26,density =43
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:0][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [3,6,27,4], coil 2 [2,6,60,4] head =19,tail = 24,density =35
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,27,4], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+nboxes = 3
+person num = 0
+coil 1 [3,6,27,4], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,27,4], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:1][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,27,4], coil 2 [2,6,60,4] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:3][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =26,tail = 40,density =26
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =25,tail = 35,density =26
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:4][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [3,6,27,4], coil 2 [3,6,60,5] head =23,tail = 816,density =33
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =58,tail = 204,density =14
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [4,6,27,4], coil 2 [3,6,60,5] head =22,tail = 816,density =43
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =47,tail = 100,density =14
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [4,6,26,4], coil 2 [3,6,60,5] head =21,tail = 526,density =45
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =41,tail = 78,density =16
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:5][info](camera_service.c:220)====>##process alg  done40000
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [4,6,26,4], coil 2 [3,6,60,5] head =20,tail = 245,density =53
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =35,tail = 816,density =20
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 7
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =19,tail = 162,density =49
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =31,tail = 816,density =25
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+[16:8:5][server](tcp_server.c:176)====>    clients  done 
+[16:8:5][server](tcp_server.c:159)====>waiting for clients 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =19,tail = 126,density =52
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [1,0,0,5] head =27,tail = 816,density =32
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:5][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =19,tail = 99,density =43
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,20], coil 2 [1,0,0,5] head =25,tail = 816,density =38
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+nboxes = 7
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =19,tail = 79,density =39
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =22,tail = 30,density =32
+coil 1 [1,0,0,20], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =19,tail = 69,density =36
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 27,density =45
+coil 1 [1,6,41,20], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =33,tail = 59,density =20
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 24,density =36
+coil 1 [1,6,41,20], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =31,tail = 49,density =20
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 22,density =21
+coil 1 [1,6,41,20], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =29,tail = 44,density =21
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [1,6,41,20], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =27,tail = 40,density =23
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [1,6,41,20], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:7][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [4,6,26,4], coil 2 [4,6,60,3] head =26,tail = 37,density =24
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [1,6,41,20], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [4,6,26,3], coil 2 [4,6,60,3] head =24,tail = 35,density =27
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [1,6,41,20], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:8:8][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:8][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[16:8:8][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:8][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[16:8:8][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:8][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:41
+[16:8:8][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:8][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:8][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[16:8:8][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[16:8:8][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:8][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [4,6,26,3], coil 2 [4,6,60,3] head =23,tail = 31,density =26
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [1,6,41,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,26,3], coil 2 [4,6,60,3] head =22,tail = 30,density =29
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,41,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,26,3], coil 2 [4,6,60,3] head =22,tail = 29,density =31
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =21,tail = 28,density =36
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =20,tail = 27,density =36
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =20,tail = 22,density =23
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =20,tail = 26,density =35
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =816,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+[16:8:9][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 25,density =38
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 25,density =40
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 25,density =40
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 25,density =38
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 24,density =37
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 24,density =36
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 24,density =36
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:11][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 24,density =36
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 24,density =35
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 24,density =36
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 24,density =36
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 689,density =41
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 816,density =43
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:12][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 816,density =44
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 816,density =46
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 471,density =48
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [4,6,60,3] head =19,tail = 233,density =47
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,60,8] head =19,tail = 233,density =49
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 187,density =49
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 140,density =50
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:14][info](camera_service.c:220)====>##process alg  done50000
+[16:8:14][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 132,density =51
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 103,density =51
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 94,density =52
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 79,density =52
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 74,density =53
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:15][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:8:15][server](tcp_server.c:176)====>    clients  done 
+[16:8:15][server](tcp_server.c:159)====>waiting for clients 
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 72,density =53
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 65,density =54
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 62,density =55
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 58,density =56
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 55,density =56
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 55,density =58
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:16][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 51,density =57
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 49,density =58
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 48,density =59
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 44,density =58
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:18][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+[16:8:18][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:18][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:18][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:18][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[16:8:18][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:41
+[16:8:18][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[16:8:18][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:18][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[16:8:18][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:18][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:18][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+[16:8:18][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 44,density =59
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 43,density =60
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 44,density =60
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =59,tail = 360,density =16
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 41,density =60
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =816,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 41,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =47,tail = 106,density =15
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 40,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =44,tail = 92,density =16
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:19][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 40,density =62
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =41,tail = 71,density =15
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =60
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =37,tail = 59,density =16
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 38,density =60
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =33,tail = 53,density =18
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 38,density =60
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =31,tail = 46,density =17
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =29,tail = 43,density =21
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,2], coil 2 [1,0,0,5] head =27,tail = 38,density =24
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,12], coil 2 [1,0,0,5] head =25,tail = 35,density =25
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+[16:8:21][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [2,6,35,12], coil 2 [1,0,0,5] head =24,tail = 31,density =26
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,35,12], coil 2 [1,0,0,5] head =23,tail = 31,density =32
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,35,12], coil 2 [1,0,0,5] head =21,tail = 28,density =33
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =20,tail = 28,density =43
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+[16:8:22][info](camera_service.c:220)====>##process alg  done60000
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =20,tail = 26,density =40
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =60
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =20,tail = 24,density =30
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =20,tail = 23,density =24
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+[16:8:22][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 39,density =61
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 21,density =16
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 816,density =70
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+de okdecode ok
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 816,density =70
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 816,density =71
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 689,density =72
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 526,density =73
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:24][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 427,density =73
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [5,6,15,8] head =19,tail = 274,density =73
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 222,density =73
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 212,density =74
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 195,density =74
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:8:25][server](tcp_server.c:176)====>    clients  done 
+[16:8:25][server](tcp_server.c:159)====>waiting for clients 
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 180,density =75
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:25][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 157,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 152,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 144,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 123,density =77
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 123,density =78
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 7
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 129,density =78
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:27][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 126,density =78
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 115,density =78
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 108,density =77
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:8:28][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:28][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:28][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:28][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:28][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[16:8:28][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:41
+[16:8:28][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[16:8:28][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:28][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:28][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[16:8:28][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[16:8:28][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+de okdecode ok
+de okdecode ok
+nboxes = 7
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 108,density =77
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =65,tail = 223,density =12
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:28][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 101,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =61,tail = 158,density =11
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 98,density =77
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =54,tail = 120,density =12
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 98,density =78
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =48,tail = 104,density =14
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 96,density =78
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =45,tail = 87,density =14
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 90,density =78
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =41,tail = 76,density =16
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:29][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+[16:8:29][info](camera_service.c:220)====>##process alg  done70000
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 90,density =78
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =39,tail = 68,density =15
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 81,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =36,tail = 58,density =16
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 79,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =34,tail = 53,density =18
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 7
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 77,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =31,tail = 49,density =20
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 77,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =30,tail = 43,density =20
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:30][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 77,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =28,tail = 42,density =24
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 75,density =77
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,12], coil 2 [1,0,0,5] head =26,tail = 38,density =24
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 74,density =77
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,10], coil 2 [1,0,0,5] head =25,tail = 36,density =26
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 73,density =77
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,10], coil 2 [1,0,0,5] head =24,tail = 33,density =26
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 71,density =73
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [3,6,22,10], coil 2 [1,0,0,5] head =23,tail = 31,density =29
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+[16:8:31][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 71,density =73
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =22,tail = 29,density =30
+coil 1 [4,6,22,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 71,density =74
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =21,tail = 28,density =35
+coil 1 [4,6,22,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 69,density =73
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 28,density =43
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 69,density =72
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 26,density =41
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 65,density =72
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 25,density =40
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 64,density =72
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 24,density =34
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 64,density =72
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 23,density =26
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+[16:8:33][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 65,density =72
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 23,density =25
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 64,density =75
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 22,density =21
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 65,density =75
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 21,density =17
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 65,density =72
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 63,density =71
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[1]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 63,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:35][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 63,density =76
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 61,density =75
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:8:35][server](tcp_server.c:176)====>    clients  done 
+[16:8:35][server](tcp_server.c:159)====>waiting for clients 
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 61,density =75
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 59,density =71
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 59,density =70
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 57,density =67
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 57,density =67
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:36][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 58,density =64
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 6
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =19,tail = 59,density =62
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =23,tail = 58,density =48
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [5,6,17,3], coil 2 [6,6,15,11] head =23,tail = 57,density =47
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [5,6,17,29], coil 2 [6,6,15,11] head =23,tail = 55,density =48
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 20,density =5
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:37][info](camera_service.c:220)====>##process alg  done80000
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+[16:8:38][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:38][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:38][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:38][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:38][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:38][camera_msg](camera_service.c:329)====>watch dog ------------>...
+[16:8:38][info](camera_service.c:331)====>watchdog dog for cam 3 , fp10s:0
+[16:8:38][info](camera_service.c:331)====>watchdog dog for cam 4 , fp10s:0
+[16:8:38][info](camera_service.c:331)====>watchdog dog for cam 5 , fp10s:0
+[16:8:38][info](camera_service.c:331)====>watchdog dog for cam 1 , fp10s:0
+[16:8:38][info](camera_service.c:331)====>watchdog dog for cam 2 , fp10s:0
+[16:8:38][info](camera_service.c:331)====>watchdog dog for cam 0 , fp10s:41
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [6,6,17,29], coil 2 [6,6,15,11] head =23,tail = 55,density =51
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 20,density =5
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [6,6,17,29], coil 2 [6,6,15,11] head =22,tail = 54,density =53
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 20,density =5
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:38][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [6,6,17,29], coil 2 [6,6,15,11] head =22,tail = 52,density =56
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =20,tail = 20,density =5
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [6,6,17,29], coil 2 [6,6,15,11] head =21,tail = 52,density =56
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 5
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =21,tail = 51,density =58
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =20,tail = 48,density =55
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =816,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =20,tail = 49,density =65
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =19,tail = 47,density =67
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =19,tail = 44,density =62
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:40][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+nboxes = 3
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =19,tail = 42,density =57
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 4
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =19,tail = 40,density =51
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =19,tail = 38,density =45
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =19,tail = 35,density =39
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [6,6,7,29], coil 2 [6,6,15,11] head =24,tail = 34,density =27
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [6,6,7,3], coil 2 [6,6,15,11] head =23,tail = 32,density =27
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [7,6,7,3], coil 2 [6,6,15,11] head =22,tail = 30,density =29
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:41][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 3
+person num = 0
+coil 1 [7,6,7,3], coil 2 [6,6,15,11] head =21,tail = 29,density =32
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =21,tail = 28,density =35
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =20,tail = 26,density =40
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 2
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =19,tail = 25,density =39
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =19,tail = 23,density =27
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:43][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 1
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =19,tail = 22,density =21
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =816,tail = 27,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[1]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:44][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:45][clients_msg](client_net.c:53)====>cam 0 output to client 192.168.1.166
+Invalid UE golomb code
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+[16:8:45][info](camera_service.c:220)====>##process alg  done90000
+de okdecode ok
+de okdecode ok
+[16:8:45][server](tcp_server.c:176)====>    clients  done 
+[16:8:45][server](tcp_server.c:159)====>waiting for clients 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+################### result: 8 
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+de okdecode ok
+nboxes = 0
+person num = 0
+coil 1 [7,6,15,3], coil 2 [6,6,15,11] head =0,tail = 0,density =0
+coil 1 [1,6,60,6], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [4,6,18,10], coil 2 [1,0,0,5] head =0,tail = 0,density =0
+p_algparam->alg_arg.p_outbuf->calarflag[0]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[1]:[0]
+p_algparam->alg_arg.p_outbuf->calarflag[2]:[0]
+de okdecode ok

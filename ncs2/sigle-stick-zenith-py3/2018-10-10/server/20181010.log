@@ -1,0 +1,4 @@
+[MOD_SYSTEM     ][warning][11:44:57.855] :create App's logdir[log/ip_log] failed,change log to[/root/2018-8-8/server]
+[MOD_SYSTEM     ][info   ][11:44:57.939] :SizeCheck in [/root/2018-8-8/server],Size[62K/1000K]
+[MOD_SYSTEM     ][highest][11:44:57.274] :init success,logdir:/root/2018-8-8/server
+[MOD_UNDIFINE   ][trace  ][11:44:57.526] :success to open listen socket.

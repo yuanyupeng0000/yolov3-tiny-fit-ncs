@@ -1,0 +1,34 @@
+[MOD_SYSTEM     ][warning][14:10:36.696] :create App's logdir[log/ip_log] failed,change log to[/root/2018-8-4-new/server]
+[MOD_SYSTEM     ][info   ][14:10:36.381] :SizeCheck in [/root/2018-8-4-new/server],Size[28K/1000K]
+[MOD_SYSTEM     ][highest][14:10:36.569] :init success,logdir:/root/2018-8-4-new/server
+[MOD_UNDIFINE   ][trace  ][14:10:36.530] :success to open listen socket.
+[MOD_UNDIFINE   ][trace  ][14:10:38.727] :Send Arp struct: ========>>>>>>>>
+[MOD_UNDIFINE   ][trace  ][14:10:38.937] :mac_target:   [ff:ff:ff:ff:ff:ff]
+[MOD_UNDIFINE   ][trace  ][14:10:38.056] :mac_source:   [00:e0:4c:38:a8:39]
+[MOD_UNDIFINE   ][trace  ][14:10:38.268] :ethertype:  [0x806]
+[MOD_UNDIFINE   ][trace  ][14:10:38.348] :hw_type:    [0x1]
+[MOD_UNDIFINE   ][trace  ][14:10:38.436] :proto_type: [0x800]
+[MOD_UNDIFINE   ][trace  ][14:10:38.630] :mac_addr_len: [6]
+[MOD_UNDIFINE   ][trace  ][14:10:38.711] :ip_addr_len:  [4]
+[MOD_UNDIFINE   ][trace  ][14:10:38.810] :operation_code: [0x1]
+[MOD_UNDIFINE   ][trace  ][14:10:38.894] :mac_sender:   [00:e0:4c:38:a8:39]
+[MOD_UNDIFINE   ][trace  ][14:10:38.993] :mac_receiver: [ff:ff:ff:ff:ff:ff]
+[MOD_UNDIFINE   ][trace  ][14:10:38.076] :ip_sender:    [192.168.17.101]
+[MOD_UNDIFINE   ][trace  ][14:10:38.158] :ip_receiver:    [255.255.255.255]
+[MOD_UNDIFINE   ][trace  ][14:10:38.240] :padding:     [zenreq,C0A81165,00E04C38A839]
+[MOD_UNDIFINE   ][trace  ][14:10:38.354] :Send Arp struct: >>>>>>>>========
+[MOD_UNDIFINE   ][trace  ][14:10:38.496] :Send Arp struct: ========>>>>>>>>
+[MOD_UNDIFINE   ][trace  ][14:10:38.952] :mac_target:     [00:e0:4c:38:a8:39]
+[MOD_UNDIFINE   ][trace  ][14:10:38.094] :mac_source:     [00:87:17:11:00:55]
+[MOD_UNDIFINE   ][trace  ][14:10:38.301] :ethertype:      [0x806]
+[MOD_UNDIFINE   ][trace  ][14:10:38.455] :hw_type:        [0x1]
+[MOD_UNDIFINE   ][trace  ][14:10:38.803] :proto_type:     [0x800]
+[MOD_UNDIFINE   ][trace  ][14:10:38.167] :mac_addr_len:   [6]
+[MOD_UNDIFINE   ][trace  ][14:10:38.511] :ip_addr_len:    [4]
+[MOD_UNDIFINE   ][trace  ][14:10:38.892] :operation_code: [0x2]
+[MOD_UNDIFINE   ][trace  ][14:10:38.234] :mac_sender:     [00:87:17:11:00:55]
+[MOD_UNDIFINE   ][trace  ][14:10:38.607] :mac_receiver:   [00:e0:4c:38:a8:39]
+[MOD_UNDIFINE   ][trace  ][14:10:38.995] :ip_sender:      [192.168.1.2]
+[MOD_UNDIFINE   ][trace  ][14:10:38.360] :ip_receiver:    [192.168.17.101]
+[MOD_UNDIFINE   ][trace  ][14:10:38.727] :padding:        [zenres,3,c0a80102,ffffff00,c0a80101]
+[MOD_UNDIFINE   ][trace  ][14:10:38.074] :Send Arp struct: <<<<<<<<========

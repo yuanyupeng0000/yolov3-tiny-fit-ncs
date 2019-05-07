@@ -57,33 +57,9 @@ include CMakeFiles/object_detection_demo_yolov3_async.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/object_detection_demo_yolov3_async.dir/flags.make
 
-CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o: CMakeFiles/object_detection_demo_yolov3_async.dir/flags.make
-CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/main.cpp
-
-CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/main.cpp > CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.i
-
-CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/main.cpp -o CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.s
-
-CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.requires:
-
-.PHONY : CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.requires
-
-CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.provides: CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.provides
-
-CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.provides.build: CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o
-
-
 CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o: CMakeFiles/object_detection_demo_yolov3_async.dir/flags.make
 CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o: ../Common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/Common.cpp
 
 CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.i: cmake_force
@@ -105,16 +81,40 @@ CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o.provides: CMakeFi
 CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o.provides.build: CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o
 
 
+CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o: CMakeFiles/object_detection_demo_yolov3_async.dir/flags.make
+CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o -c /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/main.cpp
+
+CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/main.cpp > CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.i
+
+CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/main.cpp -o CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.s
+
+CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.requires:
+
+.PHONY : CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.requires
+
+CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.provides: CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.provides
+
+CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.provides.build: CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o
+
+
 # Object files for target object_detection_demo_yolov3_async
 object_detection_demo_yolov3_async_OBJECTS = \
-"CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o" \
-"CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o"
+"CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o" \
+"CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o"
 
 # External object files for target object_detection_demo_yolov3_async
 object_detection_demo_yolov3_async_EXTERNAL_OBJECTS =
 
-object_detection_demo_yolov3_async: CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o
 object_detection_demo_yolov3_async: CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o
+object_detection_demo_yolov3_async: CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o
 object_detection_demo_yolov3_async: CMakeFiles/object_detection_demo_yolov3_async.dir/build.make
 object_detection_demo_yolov3_async: /usr/local/lib/libopencv_highgui.so.3.4.0
 object_detection_demo_yolov3_async: /usr/local/lib/libopencv_videoio.so.3.4.0
@@ -131,8 +131,8 @@ CMakeFiles/object_detection_demo_yolov3_async.dir/build: object_detection_demo_y
 
 .PHONY : CMakeFiles/object_detection_demo_yolov3_async.dir/build
 
-CMakeFiles/object_detection_demo_yolov3_async.dir/requires: CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.requires
 CMakeFiles/object_detection_demo_yolov3_async.dir/requires: CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o.requires
+CMakeFiles/object_detection_demo_yolov3_async.dir/requires: CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/object_detection_demo_yolov3_async.dir/requires
 
