@@ -53,7 +53,7 @@ def build_argparser():
     parser.add_argument("-iout", "--iou_threshold", help="Intersection over union threshold for overlapping detections"
                                                          " filtering", default=0.75, type=float)
     parser.add_argument("-ni", "--number_iter", help="Number of inference iterations", default=1, type=int)
-    parser.add_argument("-nr", "--number_req", help="Number of inference number requests", default=4, type=int)
+    parser.add_argument("-nr", "--number_req", help="Number of inference number requests", default=1, type=int)
     parser.add_argument("-pc", "--perf_counts", help="Report performance counters", default=False, action="store_true")
     return parser
 
@@ -64,12 +64,12 @@ class YoloV3Params:
     def __init__(self, param, side):
         self.num = 3 if 'num' not in param else len(param['mask'].split(',')) if 'mask' in param else int(param['num'])
         self.coords = 4 if 'coords' not in param else int(param['coords'])
-        self.classes = 6 if 'classes' not in param else int(param['classes'])
+        self.classes = 20 if 'classes' not in param else int(param['classes'])
         self.anchors = [10,25,  20,50,  30,75, 50,125,  80,200,  150,150] if 'anchors' not in param else [float(a) for a in param['anchors'].split(',')]
         self.side = side
-        if self.side == 13:
+        if self.side == 10:
             self.anchor_offset = 2 * 3
-        elif self.side == 26:
+        elif self.side == 20:
             self.anchor_offset = 2 * 0
         else:
             assert False, "Invalid output size. Only 13, 26 sizes are supported for output spatial dimensions"
@@ -153,7 +153,7 @@ def intersection_over_union(box_1, box_2):
         return 0
     return area_of_overlap / area_of_union
 
-labels = ["bus","car", "truck", "motorbike", "bicycle","person"]
+labels = ["bus","car", "truck", "motorbike", "bicycle","person", "bus","car", "truck", "motorbike", "bicycle","person", "bus","car", "truck", "motorbike", "bicycle","person", "bus","car"]
 class BBox(object):
     def __init__(self, bbox, xscale, yscale, offx, offy):
         self.left = int(bbox.left / xscale)-offx
@@ -226,26 +226,31 @@ def non_max_suppress(predicts_dict, threshold=0.5):
         return predicts_dict
 def parse_ncs2_yolov3_tiny_output(output, frame, detector):
     for layer_name, out_blob in output.items():
-        # print(layer_name)
-        # print(out_blob)
-        blockwd = 13
-        classes = 6
+        print(layer_name)
+        print(out_blob)
+        blockwd = 10
+        classes = 20
+        _anchor = 3
         imgw = frame.shape[1]
         imgh = frame.shape[0]
         threshold = 0.3
         nms = 0.75
-        targetBlockwd = 13
+        targetBlockwd = 10
+        output_chanels = (4+1+classes)*_anchor
         ####################################################################################################
-        if (layer_name == 'layer16-conv'):
-            out1 = out_blob.reshape(blockwd * blockwd * 33)
-            internalresults1 = detector.Detect(out1.astype(np.float32), 33, blockwd, blockwd, classes, imgw,
+        if (layer_name == 'conv19'):
+            out1 = out_blob.reshape(blockwd * blockwd * output_chanels)
+            print(out1)
+            internalresults1 = detector.Detect(out1.astype(np.float32), output_chanels, blockwd, blockwd, classes, imgw,
                                                imgh, threshold, nms, targetBlockwd)
+            #print(internalresults1)
             pyresults1 = [BBox(x, 1, 1, 0, 0) for x in internalresults1]
-        elif (layer_name == 'layer23-conv'):
-            out2 = out_blob.reshape(blockwd * 2 * blockwd * 2 * 33)
-            internalresults2 = detector.Detect(out2.astype(np.float32), 33, blockwd * 2, blockwd * 2, classes,
+        elif (layer_name == 'conv20'):
+            out2 = out_blob.reshape(blockwd * 2 * blockwd * 2 * output_chanels)
+            internalresults2 = detector.Detect(out2.astype(np.float32), output_chanels, blockwd * 2, blockwd * 2, classes,
                                                imgw, imgh, threshold, nms, blockwd * 2)
             pyresults2 = [BBox(x, 1, 1, 0, 0) for x in internalresults2]
+            pyresults2 = []
 
     pyresults3 =  pyresults1 + pyresults2
     # print(pyresults3)
@@ -383,7 +388,7 @@ def main():
         print('previous_request_id:{0};cur_request_id:{1}'.format(previous_request_id, cur_request_id))
         #------------------------------------------------------------------------------
         if previous_request_id >= 0:
-            status = infer_requests[previous_request_id].wait()
+            status = infer_requests[previous_request_id].wait(-1)
             if status is not 0:
                 raise Exception("Infer request not completed successfully")
 
@@ -394,12 +399,15 @@ def main():
         if(imdraw.shape[0] >= 900 or imdraw.shape[1] >= 1440):
             imdraw = cv2.resize(imdraw, (int(imdraw.shape[1]/2), int(imdraw.shape[0]/2)))
         time_loop_end = time()
+        if(previous_request_id < 0):
+            continue
         fps = 1/(time_loop_end - time_loop_start)
         if(len(fps_list) < 100):
             fps_list.append(fps)
             fps_moving_average = sum(fps_list)/len(fps_list)
         else:
             fps_moving_average = (fps_moving_average * 100 + fps)/101
+        print('fps:{0}'.format(fps))
         print('fps_moving_average:{0}'.format(fps_moving_average))
         fpsImg = cv2.putText(imdraw, "%.2ffps" % fps_moving_average, (70, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1)
         cv2.imshow('Demo',fpsImg)

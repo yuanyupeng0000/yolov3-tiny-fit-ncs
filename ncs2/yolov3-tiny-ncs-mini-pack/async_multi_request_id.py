@@ -392,7 +392,7 @@ def main():
         nmsed_between_layer_results = parse_ncs2_yolov3_tiny_output(output, frame, detector)    
         imdraw = Visualize(frame, nmsed_between_layer_results)
         if(True or imdraw.shape[0] >= 900 or imdraw.shape[1] >= 1440):
-            imdraw = cv2.resize(imdraw, (int(imdraw.shape[1]/4), int(imdraw.shape[0]/4)))
+            imdraw = cv2.resize(imdraw, (int(imdraw.shape[1]/2), int(imdraw.shape[0]/2)))
         time_loop_end = time()
         fps = 1/(time_loop_end - time_loop_start)
         '''if(len(fps_list) < 100):
@@ -404,7 +404,7 @@ def main():
         '''
         print('fps:{0}'.format(fps))
         fpsImg = cv2.putText(imdraw, "%.2ffps" % fps, (70, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1)
-        #cv2.imshow('Demo',fpsImg)
+        cv2.imshow('Demo',fpsImg)
 
         cur_request_id += 1
         if cur_request_id >= num_requests:
