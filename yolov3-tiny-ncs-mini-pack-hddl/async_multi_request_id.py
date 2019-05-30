@@ -33,7 +33,6 @@ from Visualize import *
 logging.basicConfig(format="[ %(levelname)s ] %(message)s", level=logging.INFO, stream=sys.stdout)
 log = logging.getLogger()
 
-
 def build_argparser():
     parser = ArgumentParser()
     parser.add_argument("-m", "--model", help="Path to an .xml file with a trained model.", required=True, type=str)
@@ -154,6 +153,7 @@ def intersection_over_union(box_1, box_2):
     return area_of_overlap / area_of_union
 
 labels = ["bus","car", "truck", "motorbike", "bicycle","person"]
+labels = ["bus","car", "truck"]
 class BBox(object):
     def __init__(self, bbox, xscale, yscale, offx, offy):
         self.left = int(bbox.left / xscale)-offx
@@ -224,26 +224,29 @@ def non_max_suppress(predicts_dict, threshold=0.5):
             bbox = bbox_array[keep]
             predicts_dict[object_name] = bbox.tolist()
         return predicts_dict
-def parse_ncs2_yolov3_tiny_output(output, frame, detector):
+def parse_ncs2_yolov3_tiny_output(output, frame, detector, W_H):
     for layer_name, out_blob in output.items():
-        # print(layer_name)
+        print(layer_name)
         # print(out_blob)
-        blockwd = 13
-        classes = 6
+        blockwd = int(W_H/32)
+        classes = 3
         imgw = frame.shape[1]
         imgh = frame.shape[0]
         threshold = 0.3
-        nms = 0.75
-        targetBlockwd = 13
+        nms = 0.45
+        targetBlockwd = blockwd
+        N = (4+1+classes)*3
         ####################################################################################################
-        if (layer_name == 'layer16-conv'):
-            out1 = out_blob.reshape(blockwd * blockwd * 33)
-            internalresults1 = detector.Detect(out1.astype(np.float32), 33, blockwd, blockwd, classes, imgw,
+        #if (layer_name == 'layer10-conv'):
+        if (int(layer_name[5:7]) <= 16):
+            out1 = out_blob.reshape(blockwd * blockwd * N)
+            internalresults1 = detector.Detect(out1.astype(np.float32), N, blockwd, blockwd, classes, imgw,
                                                imgh, threshold, nms, targetBlockwd)
             pyresults1 = [BBox(x, 1, 1, 0, 0) for x in internalresults1]
-        elif (layer_name == 'layer23-conv'):
-            out2 = out_blob.reshape(blockwd * 2 * blockwd * 2 * 33)
-            internalresults2 = detector.Detect(out2.astype(np.float32), 33, blockwd * 2, blockwd * 2, classes,
+        #elif (layer_name == 'layer17-conv'):
+        elif (int(layer_name[5:7]) > 16):
+            out2 = out_blob.reshape(blockwd * 2 * blockwd * 2 * N)
+            internalresults2 = detector.Detect(out2.astype(np.float32), N, blockwd * 2, blockwd * 2, classes,
                                                imgw, imgh, threshold, nms, blockwd * 2)
             pyresults2 = [BBox(x, 1, 1, 0, 0) for x in internalresults2]
 
@@ -351,8 +354,12 @@ def main():
     # ----------------------------------------------- 6. Doing inference -----------------------------------------------
     detector = YoloDetector(1)
     fps_list = []
+    Time_Duration_start = time()
+    NN = 0
     while cap.isOpened():
-        time_loop_start = time()
+        NN = NN + 1
+        duration = time() - Time_Duration_start
+        # print('total_frame:{0}, duration_fps:{1}'.format(NN, NN/duration))
         # Here is the first asynchronous point: in the Async mode, we capture frame to populate the NEXT infer request
         # in the regular mode, we capture frame to the CURRENT infer request
         if is_async_mode:
@@ -387,22 +394,14 @@ def main():
             if status is not 0:
                 raise Exception("Infer request not completed successfully")
 
-        output = exec_net.requests[previous_request_id].outputs
-        start_time = time()
-        nmsed_between_layer_results = parse_ncs2_yolov3_tiny_output(output, frame, detector)    
-        imdraw = Visualize(frame, nmsed_between_layer_results)
-        if(imdraw.shape[0] >= 900 or imdraw.shape[1] >= 1440):
-            imdraw = cv2.resize(imdraw, (int(imdraw.shape[1]/2), int(imdraw.shape[0]/2)))
-        time_loop_end = time()
-        fps = 1/(time_loop_end - time_loop_start)
-        if(len(fps_list) < 100):
-            fps_list.append(fps)
-            fps_moving_average = sum(fps_list)/len(fps_list)
-        else:
-            fps_moving_average = (fps_moving_average * 100 + fps)/101
-        print('fps_moving_average:{0}'.format(fps_moving_average))
-        fpsImg = cv2.putText(imdraw, "%.2ffps" % fps_moving_average, (70, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1)
-        #cv2.imshow('Demo',fpsImg)
+            output = exec_net.requests[previous_request_id].outputs
+            start_time = time()
+            nmsed_between_layer_results = parse_ncs2_yolov3_tiny_output(output, frame, detector, w)    
+            imdraw = Visualize(frame, nmsed_between_layer_results)
+            if(imdraw.shape[0] >= 900 or imdraw.shape[1] >= 1440):
+                imdraw = cv2.resize(imdraw, (int(imdraw.shape[1]/1.5), int(imdraw.shape[0]/1.5)))            
+            fpsImg = cv2.putText(imdraw, "%.2ffps" % float(NN/duration), (70, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+            cv2.imshow('Demo',fpsImg)
 
         cur_request_id += 1
         if cur_request_id >= num_requests:

@@ -560,3 +560,41 @@ layer {
         bias_term: true
     }
 }
+layer {
+  name: "layer23-reshape"
+  type: "Reshape"
+  bottom: "layer22-conv"
+  top: "layer23-reshape"
+  reshape_param {
+    shape {
+      dim: 0
+      dim: 132
+      dim: 13
+      dim: 13
+    }
+  }
+}
+layer {
+  name: "layer24-combine"
+  type: "Concat"
+  bottom: "layer23-reshape"
+  bottom: "layer15-conv"
+  top: "layer24-combine"
+  concat_param {
+    axis: 1
+  }
+}
+layer {
+  name: "layer25-reshape"
+  type: "Reshape"
+  bottom: "layer24-combine"
+  top: "layer25-reshape"
+  reshape_param {
+    shape {
+      dim: 0
+      dim: 13
+      dim: 13
+      dim: 165
+    }
+  }
+}

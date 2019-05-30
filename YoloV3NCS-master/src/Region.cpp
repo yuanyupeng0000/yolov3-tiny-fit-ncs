@@ -81,6 +81,26 @@ void Region::GetDetections(float* data, int c, int h, int w,
 
 		boxes[i].x = (col + logistic_activate(output[index + 0])) / blockwd; //w;
 		boxes[i].y = (row + logistic_activate(output[index + 1])) / blockwd; //h;
+                if(blockwd == 27)
+                {
+                    boxes[i].w = exp(output[index + 2]) * biases1[2*n]   / 864; //w;
+                    boxes[i].h = exp(output[index + 3]) * biases1[2*n+1] / 864; //h;
+                }
+                else if(blockwd == 54)
+                {
+                    boxes[i].w = exp(output[index + 2]) * biases2[2*n]   / 864; //w;
+                    boxes[i].h = exp(output[index + 3]) * biases2[2*n+1] / 864; //h;
+                }
+                else if(blockwd == 19)
+                {
+                    boxes[i].w = exp(output[index + 2]) * biases1[2*n]   / 608; //w;
+                    boxes[i].h = exp(output[index + 3]) * biases1[2*n+1] / 608; //h;
+                }
+                else if(blockwd == 38)
+                {
+                    boxes[i].w = exp(output[index + 2]) * biases2[2*n]   / 608; //w;
+                    boxes[i].h = exp(output[index + 3]) * biases2[2*n+1] / 608; //h;
+                }
                 if(blockwd == 13)
                 {
                     boxes[i].w = exp(output[index + 2]) * biases1[2*n]   / 416; //w;
