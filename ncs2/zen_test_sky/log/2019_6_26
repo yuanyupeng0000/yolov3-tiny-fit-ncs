@@ -1,0 +1,149 @@
+[11:56:6][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[11:56:6][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[11:56:6][info](camera_service.c:137)====>camera: 0 open 
+
+[11:56:6][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[11:56:11][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[11:56:11][info](camera_service.c:137)====>camera: 1 open 
+
+[11:56:11][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[11:56:11][info](camera_service.c:137)====>camera: 2 open 
+
+[11:56:11][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[11:56:11][info](camera_service.c:137)====>camera: 3 open 
+
+[11:56:12][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[11:56:12][err](tcp_server.c:69)====>socket err,bind err,fd 92
+[11:56:12][err](tcp_server.c:248)====>tcp server init failed, so quit!
+[11:56:12][info](main.c:36)====>main function end
+[11:56:12][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[11:56:13][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[11:56:13][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[13:54:14][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:54:14][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[13:54:14][info](camera_service.c:137)====>camera: 0 open 
+
+[13:54:14][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[13:54:15][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[13:55:13][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:55:13][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[13:55:13][info](camera_service.c:137)====>camera: 0 open 
+
+[13:55:13][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[13:55:15][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[13:55:17][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[13:55:17][info](camera_service.c:137)====>camera: 1 open 
+
+[13:55:17][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+[13:55:17][info](camera_service.c:137)====>camera: 2 open 
+
+[13:55:18][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+[13:55:18][info](camera_service.c:137)====>camera: 3 open 
+
+[13:55:18][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+[13:55:19][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[13:55:19][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[13:55:19][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[13:55:27][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:262 / 338
+[13:55:27][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:233 / 233
+[13:55:28][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:239 / 239
+[13:55:28][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:237 / 237
+[13:55:37][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:251 / 251
+[13:55:38][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:249 / 249
+[13:55:38][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:250 / 250
+[13:55:38][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:251 / 251
+[13:55:47][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:251 / 251
+[13:55:48][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:252 / 252
+[13:55:48][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:250 / 250
+[13:55:48][info](tcp_server.c:272)====>timeout!
+
+[13:55:48][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:252 / 252
+[13:55:57][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:250 / 250
+[13:55:58][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:249 / 249
+[13:55:58][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:250 / 250
+[13:55:58][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:248 / 248
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:0][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[13:56:8][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:251 / 251
+[13:56:8][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:250 / 250
+[13:56:8][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:251 / 251
+[13:56:8][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:250 / 250
+[13:56:18][info](camera_service.c:430)====>watchdog dog for cam 0 , fp10s:249 / 250
+[13:56:18][info](camera_service.c:430)====>watchdog dog for cam 1 , fp10s:247 / 247
+[13:56:18][info](camera_service.c:430)====>watchdog dog for cam 2 , fp10s:251 / 251
+[13:56:18][info](tcp_server.c:272)====>timeout!
+
+[13:56:18][info](camera_service.c:430)====>watchdog dog for cam 3 , fp10s:246 / 246
+[14:51:46][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[14:51:46][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[14:51:46][info](camera_service.c:137)====>camera: 0 open 
+
+[14:51:46][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[14:51:46][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[14:52:34][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[14:52:34][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[14:52:34][info](camera_service.c:137)====>camera: 0 open 
+
+[14:52:34][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[14:52:35][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[14:53:17][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[14:53:17][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[14:53:17][info](camera_service.c:137)====>camera: 0 open 
+
+[14:53:17][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[14:53:17][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[14:53:30][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[14:53:30][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[14:53:30][info](camera_service.c:137)====>camera: 0 open 
+
+[14:53:30][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[14:53:30][info](camera/camera_rtsp.c:23)====>camera open is ok.
+

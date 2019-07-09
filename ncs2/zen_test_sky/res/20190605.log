@@ -1,0 +1,13 @@
+[MOD_SYSTEM     ][warning][15:28:26.869] :create App's logdir[log/ip_log] failed,change log to[/home/zen/res]
+[MOD_SYSTEM     ][info   ][15:28:26.224] :SizeCheck in [/home/zen/res],Size[0K/1000K]
+[MOD_SYSTEM     ][highest][15:28:26.261] :init success,logdir:/home/zen/res
+[MOD_UNDIFINE   ][trace  ][15:28:26.040] :success to open listen socket.
+[MOD_SYSTEM     ][warning][15:32:24.751] :create App's logdir[log/ip_log] failed,change log to[/home/zen/res]
+[MOD_SYSTEM     ][highest][15:32:24.947] :init success,logdir:/home/zen/res
+[MOD_UNDIFINE   ][trace  ][15:32:24.716] :success to open listen socket.
+[MOD_SYSTEM     ][warning][15:34:03.399] :create App's logdir[log/ip_log] failed,change log to[/home/zen/res]
+[MOD_SYSTEM     ][highest][15:34:03.592] :init success,logdir:/home/zen/res
+[MOD_UNDIFINE   ][trace  ][15:34:03.691] :success to open listen socket.
+[MOD_SYSTEM     ][warning][15:41:20.089] :create App's logdir[log/ip_log] failed,change log to[/home/zen/res]
+[MOD_SYSTEM     ][highest][15:41:20.292] :init success,logdir:/home/zen/res
+[MOD_UNDIFINE   ][trace  ][15:41:20.806] :success to open listen socket.

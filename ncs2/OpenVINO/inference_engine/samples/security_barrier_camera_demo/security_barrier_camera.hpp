@@ -74,19 +74,19 @@ DEFINE_bool(h, false, help_message);
 
 /// \brief Define parameter for set image file <br>
 /// It is a required parameter
-DEFINE_string(i, "cam", video_message);
+DEFINE_string(i, "/home/yyp/Desktop/timg0.jpeg", video_message);
 
 /// \brief Define parameter for vehicle detection  model file <br>
 /// It is a required parameter
-DEFINE_string(m, "", vehicle_detection_model_message);
+DEFINE_string(m, "/data/github_repos/ncs2/intel_models/vehicle-license-plate-detection-barrier-0106/FP32/vehicle-license-plate-detection-barrier-0106.xml", vehicle_detection_model_message);
 
 /// \brief Define parameter for vehicle attributes model file <br>
 /// It is a required parameter
-DEFINE_string(m_va, "", vehicle_attribs_model_message);
+DEFINE_string(m_va, "/data/github_repos/ncs2/intel_models/vehicle-attributes-recognition-barrier-0039/FP32/vehicle-attributes-recognition-barrier-0039.xml", vehicle_attribs_model_message);
 
 /// \brief Define parameter for vehicle detection  model file <br>
 /// It is a required parameter
-DEFINE_string(m_lpr, "", lpr_model_message);
+DEFINE_string(m_lpr, "/data/github_repos/ncs2/intel_models/license-plate-recognition-barrier-0001/FP32/license-plate-recognition-barrier-0001.xml", lpr_model_message);
 
 /// \brief device the target device for vehicle detection infer on <br>
 DEFINE_string(d, "CPU", target_device_message);
@@ -130,7 +130,8 @@ DEFINE_int32(nireq, 1, ninfer_request_message);
 
 /// \brief Flag to specify number of expected input channels<br>
 /// It is an optional parameter
-DEFINE_uint32(nc, 1, num_cameras);
+/////////yyp DEFINE_uint32(nc, 1, num_cameras);
+DEFINE_int32(nc, 1, num_cameras);
 
 /**
 * \brief This function show a help message

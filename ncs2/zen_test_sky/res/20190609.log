@@ -1,0 +1,4 @@
+[MOD_SYSTEM     ][warning][02:01:19.253] :create App's logdir[log/ip_log] failed,change log to[/home/zen/res]
+[MOD_SYSTEM     ][info   ][02:01:19.618] :SizeCheck in [/home/zen/res],Size[7K/1000K]
+[MOD_SYSTEM     ][highest][02:01:19.658] :init success,logdir:/home/zen/res
+[MOD_UNDIFINE   ][trace  ][02:01:19.121] :success to open listen socket.
