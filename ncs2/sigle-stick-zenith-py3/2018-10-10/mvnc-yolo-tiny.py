@@ -40,7 +40,7 @@ def init1():
     return detector.devNum
 
 detector = []
-NUM = 8
+NUM = 1
 def init(): 
     model_xml = 'FP16/20190411091541_TinyYoloV3NCS.xml'
     model_bin = 'FP16/20190411091541_TinyYoloV3NCS.bin'

@@ -379,6 +379,8 @@ def main():
             in_frame = cv2.resize(frame, (w, h))
 
         # resize input_frame to network size
+        #!!!! just 4 test bgr2rgb
+        #!!!! in_frame = in_frame[:,:,(2,1,0)]
         in_frame = in_frame.transpose((2, 0, 1))  # Change data layout from HWC to CHW
         in_frame = in_frame.reshape((n, c, h, w))
 

@@ -1,9 +1,9 @@
 import os, sys, datetime 
 if(len(sys.argv) < 2):
-    print('please input : 1.yolov3-tiny-ncs-weights file 2.yolov3-tiny-ncs-cfg file')
+    print('please input : yolov3-tiny-ncs-weights file')
     exit(1)
 weights = sys.argv[1]
-cfg = sys.argv[2]
+#cfg = sys.argv[2]
 
 #sys.path.insert(0, '/data/ssd-caffe/py2_caffe/python') 
 sys.path.insert(0, '/data/ssd-caffe/new-yolov3-caffe/python')
@@ -187,7 +187,7 @@ prototxt = '/data/github_repos/yolov3-tiny-fit-ncs/ncs/yolov3-tiny-ncs-without-l
 caffemodel = (datetime.datetime.now()).strftime("%Y%m%d%H%M%S_") + 'TinyYoloV3NCS.caffemodel'
 darknet2caffe(cfgfile, weights, prototxt, caffemodel)
 
-mvnc_command = 'sh generate-graph.sh ' + caffemodel
+mvnc_command = 'sh generate-graph.sh ' + caffemodel + ' ' + prototxt
 os.system(mvnc_command)
 set_ncs2_env_command = 'sh source /opt/intel/computer_vision_sdk/bin/setupvars.sh'
 os.system(set_ncs2_env_command)
