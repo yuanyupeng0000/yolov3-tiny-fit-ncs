@@ -29,6 +29,9 @@ from openvino.inference_engine import IENetwork, IEPlugin
 import numpy as np
 from libpydetector import YoloDetector
 from Visualize import *
+from generate_xml import *
+import datetime
+
 
 logging.basicConfig(format="[ %(levelname)s ] %(message)s", level=logging.INFO, stream=sys.stdout)
 log = logging.getLogger()
@@ -54,6 +57,7 @@ def build_argparser():
     parser.add_argument("-ni", "--number_iter", help="Number of inference iterations", default=1, type=int)
     parser.add_argument("-nr", "--number_req", help="Number of inference number requests", default=1, type=int)
     parser.add_argument("-pc", "--perf_counts", help="Report performance counters", default=False, action="store_true")
+    parser.add_argument("-xml", "--xml", help="generate xml file", default=False, type=str)
     return parser
 
 
@@ -152,8 +156,8 @@ def intersection_over_union(box_1, box_2):
         return 0
     return area_of_overlap / area_of_union
 
-labels = ["bus","car", "truck", "motorbike", "bicycle","person"]
-labels = ["bus","car", "truck", "motorbike", "bicycle","person", "bus","car", "truck", "motorbike", "bicycle","person", "bus","car", "truck", "motorbike", "bicycle","person", "a", "b", "c", "d"]
+labels = ["bus","car", "truck", "motorbike", "bicycle", "person", "plate"]
+#labels = ["bus","car", "truck", "motorbike", "bicycle","person", "plate", "bus","car", "truck", "motorbike", "bicycle","person", "plate", "bus","car", "truck", "motorbike", "bicycle","person","plate", "a", "b", "c", "d"]
 class BBox(object):
     def __init__(self, bbox, xscale, yscale, offx, offy):
         self.left = int(bbox.left / xscale)-offx
@@ -270,7 +274,7 @@ def parse_ncs2_yolov3_tiny_output(output, frame, detector, W_H):
     # print(pyresults3)
     pre_dic = {}
     list_all = []
-    for i in np.arange(6):
+    for i in np.arange(len(labels)):
         list_temp = []
         for bbx in pyresults3:
             if (bbx.objType == i):
@@ -305,8 +309,11 @@ def parse_ncs2_ssd_output(output, frame, W_H): #W_H=self.w, video_chanel=self.vi
                     ymin = int(out_blob[0][0][i][4] * frame.shape[0])
                     xmax = int(out_blob[0][0][i][5] * frame.shape[1])
                     ymax = int(out_blob[0][0][i][6] * frame.shape[0])
-                    class_id = int(out_blob[0][0][i][0])
-                    class_name = ''
+                    class_id = int(out_blob[0][0][i][1])
+                    if(class_id == 2):
+                        class_name = 'plate'
+                    else:
+                        class_name = ''
                     __BBox = _BBox(xmin, ymin, xmax, ymax, out_blob[0][0][i][2], class_id, class_name)
                     print('xmin ymin xmax ymax class_id confidence:{0},{1},{2},{3},{4},{5}'.format(xmin, ymin, xmax, ymax, class_id, out_blob[0][0][i][2]))
                     results_.append(__BBox)
@@ -327,6 +334,7 @@ def main():
     threshold = args.prob_threshold
     model_xml = args.model
     model_bin = os.path.splitext(model_xml)[0] + ".bin"
+    generate_xml_flag = args.xml
 
     # ------------- 1. Plugin initialization for specified device and load extensions library if specified -------------
     plugin = IEPlugin(device=args.device, plugin_dirs=args.plugin_dir) ###
@@ -405,7 +413,7 @@ def main():
     while cap.isOpened():
         NN = NN + 1
         duration = time() - Time_Duration_start
-        # print('total_frame:{0}, duration_fps:{1}'.format(NN, NN/duration))
+        print('total_frame:{0}, duration_fps:{1}'.format(NN, NN/duration))
         # Here is the first asynchronous point: in the Async mode, we capture frame to populate the NEXT infer request
         # in the regular mode, we capture frame to the CURRENT infer request
         if is_async_mode:
@@ -426,7 +434,7 @@ def main():
 
         # resize input_frame to network size
         #!!!! just 4 test bgr2rgb
-        #!!!! in_frame = in_frame[:,:,(2,1,0)]
+        in_frame = in_frame[:,:,(2,1,0)]
         in_frame = in_frame.transpose((2, 0, 1))  # Change data layout from HWC to CHW
         in_frame = in_frame.reshape((n, c, h, w))
 
@@ -452,7 +460,7 @@ def main():
             if(imdraw.shape[0] >= 900 or imdraw.shape[1] >= 1440):
                 imdraw = cv2.resize(imdraw, (int(imdraw.shape[1]/1.5), int(imdraw.shape[0]/1.5)))            
             fpsImg = cv2.putText(imdraw, "%.2ffps" % float(NN/duration), (70, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
-            cv2.imshow('Demo',fpsImg)
+            #cv2.imshow('Demo',fpsImg)
 
         cur_request_id += 1
         if cur_request_id >= num_requests:
@@ -475,6 +483,86 @@ def main():
             exec_net.requests[cur_request_id].wait()
             is_async_mode = not is_async_mode
             log.info("Switched to {} mode".format("async" if is_async_mode else "sync"))
+    if(os.path.isdir(input_stream)):
+        if(generate_xml_flag):
+            generated_xml_dir = (datetime.datetime.now()).strftime("%Y%m%d") + '_xmls'
+            os.system('mkdir '+ generated_xml_dir)
+        from queue import Queue
+        q = Queue()
+        print('input is images dir')
+        input_images=os.listdir(input_stream)
+        print('{0} images will predicted!'.format(len(input_images)))
+        for i in input_images:
+            NN = NN + 1
+            duration = time() - Time_Duration_start
+            print('is_async_mode={0}'.format(is_async_mode))
+            frame = cv2.imread(input_stream + '/' + i)
+            name_frame = [input_stream + '/' + i,frame]
+            q.put(name_frame)
+            if is_async_mode:
+                request_id = next_request_id
+                in_frame = cv2.resize(frame, (w, h))
+
+            else:
+                request_id = cur_request_id
+                in_frame = cv2.resize(frame, (w, h))
+
+            # resize input_frame to network size
+            #!!!! just 4 test bgr2rgb
+            in_frame = in_frame[:,:,(2,1,0)]
+            in_frame = in_frame.transpose((2, 0, 1))  # Change data layout from HWC to CHW
+            in_frame = in_frame.reshape((n, c, h, w))
+
+            # Start inference
+            start_time = time()
+            #------------------------------------------------------------------------------
+            exec_net.start_async(cur_request_id, inputs={input_blob: in_frame})
+            #------------------------------------------------------------------------------
+            print('previous_request_id:{0};cur_request_id:{1}'.format(previous_request_id, cur_request_id))
+            #------------------------------------------------------------------------------
+            if previous_request_id >= 0:
+                name_frame = q.get()
+                name = name_frame[0]
+                frame = name_frame[1]
+                status = infer_requests[previous_request_id].wait()
+                if status is not 0:
+                    raise Exception("Infer request not completed successfully")
+
+                output = exec_net.requests[previous_request_id].outputs
+                start_time = time()
+                if('TinyYoloV3' in model_xml):
+                    nmsed_between_layer_results = parse_ncs2_yolov3_tiny_output(output, frame, detector, w)
+                else:
+                    nmsed_between_layer_results = parse_ncs2_ssd_output(output, frame, w)
+                if(generate_xml_flag and len(nmsed_between_layer_results) > 0):
+                    generate_xml(nmsed_between_layer_results, name, generated_xml_dir)    
+                '''imdraw = Visualize(frame, nmsed_between_layer_results)
+                if(imdraw.shape[0] >= 900 or imdraw.shape[1] >= 1440):
+                    imdraw = cv2.resize(imdraw, (int(imdraw.shape[1]/1.5), int(imdraw.shape[0]/1.5)))            
+                fpsImg = cv2.putText(imdraw, "%.2ffps" % float(NN/duration), (70, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+                cv2.imshow('Demo',fpsImg)'''
+
+            cur_request_id += 1
+            if cur_request_id >= num_requests:
+                cur_request_id = 0
+                required_inference_requests_were_executed = True
+
+            previous_request_id += 1
+            if previous_request_id >= num_requests:
+                previous_request_id = 0
+            #--------------------------------------------------------------------------------------------------------------
+               
+            #if is_async_mode:
+            #    frame = next_frame
+            key = cv2.waitKey(1)
+            # Tab key
+            if key == 27:
+                break
+            # ESC key
+            if key == 9:
+                exec_net.requests[cur_request_id].wait()
+                is_async_mode = not is_async_mode
+                log.info("Switched to {} mode".format("async" if is_async_mode else "sync"))               
 
     cv2.destroyAllWindows()
 

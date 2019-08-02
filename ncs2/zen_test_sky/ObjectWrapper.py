@@ -8,6 +8,9 @@ from openvino.inference_engine import IENetwork, IEPlugin
 logging.basicConfig(format="[ %(levelname)s ] %(message)s", level=logging.INFO, stream=sys.stdout)
 log = logging.getLogger()
 labels = ["bus","car", "truck", "motorbike", "bicycle","person"]
+#labels_map = ["backgroud","vehicle","lpr"]
+lpr_labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9","<Anhui>", "<Beijing>", "<Chongqing>", "<Fujian>","<Gansu>", "<Guangdong>", "<Guangxi>", "<Guizhou>","<Hainan>", "<Hebei>", "<Heilongjiang>", "<Henan>","<HongKong>", "<Hubei>", "<Hunan>", "<InnerMongolia>","<Jiangsu>", "<Jiangxi>", "<Jilin>", "<Liaoning>","<Macau>", "<Ningxia>", "<Qinghai>", "<Shaanxi>","<Shandong>", "<Shanghai>", "<Shanxi>", "<Sichuan>",
+"<Tianjin>", "<Tibet>", "<Xinjiang>", "<Yunnan>","<Zhejiang>", "<police>","A", "B", "C", "D", "E", "F", "G", "H", "I", "J","K", "L", "M", "N", "O", "P", "Q", "R", "S", "T","U", "V", "W", "X", "Y", "Z"]
 
 class BBox(object):
     def __init__(self, bbox, xscale, yscale, offx, offy):
@@ -27,6 +30,20 @@ class BBox_(object):
         self.confidence = bbox_list[4]
         self.objType = bbox_list[5]
         self.name = labels[bbox_list[5]]
+
+class _BBox(object):
+    def __init__(self, left, top, right, bottom, confidence, objType, name, lprtext=''):
+        #print('left top right bottom confidence :{0},{1},{2},{3},{4}, {5}'.format(left, top, right, bottom, confidence, objType))
+        self.left = int(left)
+        self.top = int(top)
+        self.right = int(right)
+        self.bottom = int(bottom)
+        self.confidence = confidence
+        self.objType = objType
+        self.name = name
+        if(name == 'lpr'):
+            self.lprtext = lprtext
+
 
 def non_max_suppress(predicts_dict, threshold=0.3):
     """
@@ -119,16 +136,23 @@ def parse_ncs2_yolov3_tiny_output(output, frame, detector, W_H):
             nmsed_between_layer_results.append(BBox__)
 
     return nmsed_between_layer_results
-        
+
+
 
 class ObjectWrapper():
-    args_device = 'MYRIAD'
+    args_device = 'HDDL'
     args_plugin_dir = None
-    num_requests = 3
+    num_requests = 1
     args_cpu_extension = False
     
-    def __init__(self, model_xml, model_bin):
+    
+    def __init__(self, model_xml, model_bin, index_i):
         select = 1
+        self.video_chanel = index_i
+        if('TinyYoloV3' in model_xml):
+            self.base_detection = 'TinyYoloV3'
+        else:
+            self.base_detection = 'ssd'   
         # --------------------------------------------- model detect start-------------------------------------------------------#
         self.num_requests = ObjectWrapper.num_requests
         self.cur_request_id = 0
@@ -155,8 +179,8 @@ class ObjectWrapper():
                       "or --cpu_extension command line argument")
                 sys.exit(1)
 
-        assert len(net.inputs.keys()) == 1, "Sample supports only YOLO V3 based single input topologies"
-        assert len(net.outputs) == 2, "Sample supports only YOLO V3 Tiny based double output topologies"
+        #assert len(net.inputs.keys()) == 1, "Sample supports only YOLO V3 based single input topologies"
+        #assert len(net.outputs) == 2, "Sample supports only YOLO V3 Tiny based double output topologies"
 
         # ---------------------------------------------- 4. Preparing inputs -----------------------------------------------
         log.info("Preparing inputs")
@@ -177,7 +201,8 @@ class ObjectWrapper():
         self.net = net
         self.input_blob = input_blob
         # --------------------------------------------- model detect end-------------------------------------------------------#
-
+        
+        
         # --------------------------------------------- model LPR start-------------------------------------------------------#
         self.num_requests = ObjectWrapper.num_requests
         self.lpr_cur_request_id = 0
@@ -193,8 +218,8 @@ class ObjectWrapper():
         lpr_model_xml = 'FP16/license-plate-recognition-barrier-0001.xml'
         lpr_model_bin = 'FP16/license-plate-recognition-barrier-0001.bin'
         log.info("Loading network files:\n\t{}\n\t{}".format(lpr_model_xml, lpr_model_bin))
-        lpr_net = IENetwork(model=lpr_model_bin, weights=lpr_model_bin) ###
-
+        lpr_net = IENetwork(model=lpr_model_xml, weights=lpr_model_bin) ###
+        
         # ---------------------------------- 3. Load CPU extension for support specific layer ------------------------------
         if lpr_plugin.device == "CPU":
             supported_layers = lpr_plugin.get_supported_layers(net)
@@ -208,17 +233,21 @@ class ObjectWrapper():
 
         #assert len(lpr_net.inputs.keys()) == 1, "Sample supports only YOLO V3 based single input topologies"
         #assert len(lpr_net.outputs) == 2, "Sample supports only YOLO V3 Tiny based double output topologies"
-
+        
         # ---------------------------------------------- 4. Preparing inputs -----------------------------------------------
         log.info("Preparing inputs")
-        lpr_input_blob = next(iter(lpr_net.inputs))
-
+        #lpr_input_blob = next(iter(lpr_net.inputs))
+        ### 
+        lpr_input_blob_1 = 'data'
+        lpr_input_blob_0 = 'seq_ind'
+        
         #  Defaulf batch_size is 1
         lpr_net.batch_size = 1
-
+        
         # Read and pre-process input images
-        self.lpr_n, self.lpr_c, self.lpr_h, self.lpr_w = lpr_net.inputs[lpr_input_blob].shape
-
+        self.lpr_n, self.lpr_c, self.lpr_h, self.lpr_w = lpr_net.inputs['data'].shape
+        #print(lpr_net.inputs['seq_ind'].shape)
+        
         # ----------------------------------------- 5. Loading model to the plugin -----------------------------------------
         log.info("Loading model to the plugin")
         lpr_exec_net = lpr_plugin.load(network=lpr_net, num_requests=ObjectWrapper.num_requests) ###
@@ -226,9 +255,8 @@ class ObjectWrapper():
         self.lpr_infer_requests = lpr_exec_net.requests
         self.lpr_plugin = lpr_plugin
         self.lpr_net = lpr_net
-        self.lpr_input_blob = lpr_input_blob
-        # --------------------------------------------- model LPR end-------------------------------------------------------#
-
+        #self.lpr_input_blob = lpr_input_blob
+        # --------------------------------------------- model LPR end-------------------------------------------------------#       
 
     def __del__(self):
         del self.net
@@ -237,6 +265,41 @@ class ObjectWrapper():
         del self.infer_requests
         del self.detector
         del self.input_blob
+        # --------------------
+        
+        del self.lpr_net
+        del self.lpr_exec_net
+        del self.lpr_plugin
+        del self.lpr_infer_requests
+        #del self.lpr_input_blob
+
+    def parse_ncs2_ssd_output(self, output, frame): #W_H=self.w, video_chanel=self.video_chanel
+        for layer_name, out_blob in output.items():
+            #print(layer_name)
+            #print(out_blob.shape)
+            results_ = []
+            for i in range(10):
+                # Draw only objects when probability more than specified threshold
+                if out_blob[0][0][i][2] > 0.1: 
+                    xmin = int(out_blob[0][0][i][3] * frame.shape[1])
+                    ymin = int(out_blob[0][0][i][4] * frame.shape[0])
+                    xmax = int(out_blob[0][0][i][5] * frame.shape[1])
+                    ymax = int(out_blob[0][0][i][6] * frame.shape[0])
+                    class_id = int(out_blob[0][0][i][1])
+                    class_name = 'not_lpr' if class_id == 1 else 'lpr'
+                    __BBox = _BBox(xmin, ymin, xmax, ymax, out_blob[0][0][i][2], class_id, class_name)
+                    results_.append(__BBox)
+                    #Draw box and label\class_id
+                    #color = (min(class_id * 12.5, 255), min(class_id * 7, 255), min(class_id * 5, 255))
+                    #cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), color, 2)
+                    #det_label = labels_map[class_id] if labels_map else str(class_id)
+                    #cv2.putText(frame, det_label + ' ' + str(round(obj[2] * 100, 1)) + ' %', (xmin, ymin - 7),
+                    #            cv2.FONT_HERSHEY_COMPLEX, 0.6, color, 1)
+        print('video_chanel:{0}'.format(self.video_chanel))
+        #if(self.video_chanel == 0):
+        #    cv2.imwrite('test', frame)
+        # cv2.waitkey(1)
+        return results_
 
 
     def non_max_suppress_(self, predicts_dict, nms_tuple=(3, 5), threshold=0.7):
@@ -269,8 +332,70 @@ class ObjectWrapper():
         #predicts_dict[object_name] = bbox.tolist()
         #predicts_dict = predicts_dict
         #return predicts_dict
+    def get_LPR(self, nmsed_between_layer_results, in_frame):
+        #print('----------------------------------------get lpr start-----------------------------------')
+        seq_ind_ = np.ones(88)
+        seq_ind = seq_ind_.reshape((88,1))
+        seq_ind[0][0] = 0.0
+        
+        #for sigle image
+        '''
+        in_frame = cv2.imread('/video/picture/mini_plate.png')                            
+        #in_frame = in_frame.reshape((self.c, self.h, self.w))
+        #print(in_frame.shape)
+        #in_frame = in_frame.transpose((2, 1, 0))  # Change data layout
+        print(in_frame.shape)
+        in_frame = cv2.resize(in_frame, (self.lpr_w, self.lpr_h))
+        print(in_frame.shape)
+        in_frame = in_frame.transpose((2, 0, 1))  # Change data layout
+        print(in_frame.shape)
+        in_frame = in_frame.reshape((self.lpr_n, self.lpr_c, self.lpr_h, self.lpr_w))
+        '''
+        
+        #print(seq_ind_)
+        lpr_result_dic = {}
+        for obj in  nmsed_between_layer_results:
+            if(obj.objType == 2):
+                #for crop
+                #print(in_frame.shape)
+                in_frame = in_frame[obj.top:obj.bottom,obj.left:obj.right,:]
+                #print(in_frame.shape)
+                in_frame = cv2.resize(in_frame, (self.lpr_w, self.lpr_h))
+                in_frame = in_frame.transpose((2, 0, 1))  # Change data layout
+                in_frame = in_frame.reshape((self.lpr_n, self.lpr_c, self.lpr_h, self.lpr_w))
+                #print(in_frame.shape)
+                self.lpr_exec_net.start_async(self.lpr_cur_request_id, inputs={'seq_ind':seq_ind, 'data':in_frame})
+                if self.lpr_previous_request_id >= 0:
+                    status = self.lpr_infer_requests[self.lpr_previous_request_id].wait()
+                    if status is not 0:
+                        raise Exception("Infer request not completed successfully")
+                    output_ = self.lpr_exec_net.requests[self.lpr_previous_request_id].outputs
+                    onedarray = output_['decode'].reshape((88))
+                    #print(type(onedarray))
+                    text = ''
+                    
+                    for label_id in onedarray:
+                        if(label_id == -1):
+                            break
+                        text = text + lpr_labels[int(label_id)]
+                    
+                    #lpr_result_dic[(nmsed_between_layer_results.index(obj))] = text
+                    obj.lprtext = text
+                    
+                    
+                self.lpr_cur_request_id += 1
+                if self.lpr_cur_request_id >= self.num_requests:
+                    self.lpr_cur_request_id = 0
+
+                self.lpr_previous_request_id += 1
+                if self.lpr_previous_request_id >= self.num_requests:
+                    self.lpr_previous_request_id = 0
+        #print('----------------------------------------get lpr end-----------------------------------')
+        #print(lpr_result_dic)
+        return nmsed_between_layer_results        
+        
     def Detect(self, frame):
-        print("Detect")
+        print("NCS Detect")
         # ----------------------------------------------- 6. Doing inference
         # warming up - out of scope
 
@@ -293,8 +418,12 @@ class ObjectWrapper():
             if status is not 0:
                 raise Exception("Infer request not completed successfully")
             output = self.exec_net.requests[self.previous_request_id].outputs
-            nmsed_between_layer_results = parse_ncs2_yolov3_tiny_output(output=output, frame=frame, detector=self.detector, W_H=self.w)
-
+            if('TinyYoloV3' in self.base_detection):
+                nmsed_between_layer_results = parse_ncs2_yolov3_tiny_output(output=output, frame=frame, detector=self.detector, W_H=self.w)
+            else:
+                nmsed_between_layer_results = self.parse_ncs2_ssd_output(output=output, frame=frame)
+                # -------------------------------------------------- run LPR ---------------------------------------------------
+                nmsed_between_layer_results = self.get_LPR(nmsed_between_layer_results, frame)
         self.cur_request_id += 1
         if self.cur_request_id >= self.num_requests:
             self.cur_request_id = 0

@@ -1,0 +1,951 @@
+[5:42:11][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+[5:42:11][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+alg malloc ok 
+[5:42:11][info](camera_service.c:137)====>camera: 0 open 
+
+[5:42:11][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[ INFO ] Loading network files:
+	FP16/20190104102512_TinyYoloV3NCS.xml
+	FP16/20190104102512_TinyYoloV3NCS.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+HDDL BSL configure file is not found or load failed, scanning automatically
+[ion_close][69]close ion_fd = 3
+HDDL BSL configure file is not found or load failed, scanning automatically
+## HDDL_INSTALL_DIR: /opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl
+init ok
+finding ...
+py found
+[05:42:12.0315][26440]I[ServiceStarter.cpp:93] Info: Found HDDL Service is not running. To start HDDL Service ...
+[05:42:12.0398][26440]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[5:42:12][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[05:42:12.2801][26456]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_service.config' has been loaded
+[05:42:12.2810][26456]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_service_alive.mutex owner: user-'no_change', group-'users', mode-'0660'
+[05:42:12.2811][26456]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_service_ready.mutex owner: user-'no_change', group-'users', mode-'0660'
+[05:42:12.2812][26456]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_start_exit.mutex owner: user-'no_change', group-'users', mode-'0660'
+[05:42:12.2813][26456]I[AutobootStarter.cpp:127] Info: No running autoboot process. Start autoboot daemon...
+[05:42:15.4792][26456]I[AutobootStarter.cpp:71] Info: Found autoboot is running.
+[05:42:15.4848][26456]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_snapshot.sock owner: user-'no_change', group-'users', mode-'0660'
+[05:42:15.4884][26456]I[DeviceSchedulerFactory.cpp:48] Info: ## DeviceSchedulerFacotry ## Created Squeeze Device-Scheduler2.
+[05:42:15.4886][26456]I[DeviceManager.cpp:388] ## SqueezeScheduler created ##
+[usblink_open:453] open vsc device succ:31,path=/dev/myriad0
+[05:42:17.4918][26456]I[DeviceManager.cpp:496] worker(Wt4.2) created on device(4.2), type(0)
+[usblink_open:453] open vsc device succ:32,path=/dev/myriad1
+[05:42:19.4959][26456]I[DeviceManager.cpp:496] worker(Wt4.1) created on device(4.1), type(0)
+[05:42:19.4960][26456]I[DeviceManager.cpp:106] DEVICE FOUND : 2
+[05:42:19.4960][26456]I[DeviceManager.cpp:107] DEVICE OPENED : 2
+[05:42:19.4960][26456]I[DeviceManagerCreator.cpp:53] New device manager(DeviceManager0) created with subclass(0), deviceCount(2)
+[05:42:19.4970][26456]I[TaskSchedulerFactory.cpp:45] Info: ## TaskSchedulerFactory ## Created Polling Task-Scheduler.
+[05:42:19.4975][26456]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_service.sock owner: user-'no_change', group-'users', mode-'0660'
+[05:42:19.4982][26456]I[MessageDispatcher.cpp:85] Message Dispatcher initialization finished
+[05:42:19.4983][26456]I[main.cpp:114] SERVICE IS READY ...
+[05:42:19.5530][26440]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:42:19.5533][26440]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:42:19.5534][26440]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:42:19.5537][26440]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [05:42:19.5538][26555]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:1
+[ INFO ] Loading network files:
+	FP16/license-plate-recognition-barrier-0001.xml
+	FP16/license-plate-recognition-barrier-0001.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+[HDDLPlugin] [05:42:20.1900][26440]I[HddlBlob.cpp:165] Info: HddlBlob initialize ion ...
+[HDDLPlugin] [05:42:20.1901][26440]I[HddlBlob.cpp:175] Info: HddlBlob initialize ion successfully.
+[HDDLPlugin] [05:42:20.1976][26440]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [05:42:20.1977][26440]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:42:20.1978][26440]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:42:20.1979][26440]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:42:20.1983][26440]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [05:42:20.1984][26561]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:2
+[05:42:19.5541][26543]I[ClientManager.cpp:159] client(id:1) registered: clientName=HDDLPlugin socket=2
+[05:42:20.1888][26544]I[GraphManager.cpp:425] Load graph success, graphId=1 graphName=Darkent2Caffe
+[05:42:20.1985][26543]I[ClientManager.cpp:159] client(id:2) registered: clientName=HDDLPlugin socket=3
+(Wt4.1): [ LPRNet ] -> [ Darkent2Caffe ] { Darkent2Caffe }
+(Wt4.2): [ Darkent2Caffe ] -> [ LPRNet ] { Darkent2Caffe }
+
+[ INFO ] Loading network files:
+	FP16/20190104102512_TinyYoloV3NCS.xml
+	FP16/20190104102512_TinyYoloV3NCS.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+[HDDLPlugin] [05:42:20.3389][26440]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [05:42:20.3389][26440]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:42:20.3391][26440]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:42:20.3392][26440]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:42:20.3395][26567]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+[HDDLPlugin] [05:42:20.3397][26440]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+Client Id:3
+[ INFO ] Loading network files:
+	FP16/license-plate-recognition-barrier-0001.xml
+	FP16/license-plate-recognition-barrier-0001.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+[HDDLPlugin] [05:42:20.6768][26440]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [05:42:20.6768][26440]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:42:20.6770][26440]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:42:20.6771][26440]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:42:20.6775][26440]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [05:42:20.6776][26573]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:4
+[ INFO ] Loading network files:
+	FP16/20190104102512_TinyYoloV3NCS.xml
+	FP16/20190104102512_TinyYoloV3NCS.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+[HDDLPlugin] [05:42:20.7624][26440]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [05:42:20.7624][26440]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:42:20.7626][26440]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:42:20.7626][26440]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:42:20.7630][26440]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [05:42:20.7630][26579]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:5
+[ INFO ] Loading network files:
+	FP16/license-plate-recognition-barrier-0001.xml
+	FP16/license-plate-recognition-barrier-0001.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+[HDDLPlugin] [05:42:21.0996][26440]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [05:42:21.0997][26440]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:42:21.0998][26440]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:42:21.0999][26440]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:42:21.1003][26440]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [05:42:21.1004][26585]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:6
+[ INFO ] Loading network files:
+	FP16/20190104102512_TinyYoloV3NCS.xml
+	FP16/20190104102512_TinyYoloV3NCS.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+[HDDLPlugin] [05:42:21.1843][26440]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [05:42:21.1844][26440]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:42:21.1845][26440]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:42:21.1846][26440]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:42:21.1850][26440]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [05:42:21.1850][26591]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:7
+[ INFO ] Loading network files:
+	FP16/license-plate-recognition-barrier-0001.xml
+	FP16/license-plate-recognition-barrier-0001.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+[HDDLPlugin] [05:42:21.5135][26440]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[HDDLPlugin] [05:42:21.5136][26440]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:42:21.5137][26440]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:42:21.5138][26440]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:42:21.5142][26440]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [05:42:21.5142][26597]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:8
+Load NCS devices ok！ NCS num =4
+ncs_id =0
+lane region = [323,59,348,59,575,455,379,455]
+front region = [326,83,361,83,381,117,331,117]
+middle region = [344,211,435,211,453,244,349,244]
+rear region = [361,328,501,328,534,384,369,384]
+lane region = [271,71,285,71,199,461,4,461]
+front region = [262,83,283,83,276,115,240,115]
+middle region = [176,208,255,208,248,241,154,241]
+rear region = [92,332,228,332,215,388,53,388]
+lane region = [289,62,320,62,379,468,203,468]
+front region = [285,84,322,84,326,113,279,113]
+middle region = [257,213,341,213,345,240,252,240]
+rear region = [232,333,359,333,367,387,220,387]
+calibration point = [19,455],[69,45],[592,25],[594,469]
+base line = [291,263],[288,325]
+base length = 6.000000,near_point_length =20.000000
+coil actual length = 3,5
+lane region = 0,[323,59,348,59,575,455,379,455]
+lane region = 1,[271,71,285,71,199,461,4,461]
+lane region = 2,[289,62,320,62,379,468,203,468]
+person region = 0,[372,480,372,385,484,385,484,480]
+[5:42:21][info](camera_service.c:309)====>cam_info[0]: creating thread ............................
+[5:42:21][info](camera_service.c:137)====>camera: 1 open 
+
+alg malloc ok 
+ncs_id =1
+lane region = [205,85,267,85,193,457,19,457]
+front region = [189,116,261,116,255,149,174,149]
+middle region = [138,219,241,219,233,255,121,255]
+rear region = [89,318,221,318,206,395,50,395]
+nboxes = 0
+person num = 0
+person obj =0,direction num = [0,0]
+lane region = [270,86,296,86,388,461,201,461]
+front region = [265,115,303,115,311,148,259,148]
+middle region = [246,220,328,220,336,255,239,255]
+rear region = [225,328,354,328,369,383,215,383]
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+degree = [393,30],[289,40],[190,50]
+lane region = [298,74,331,74,592,466,401,466]
+front region = [309,116,359,116,379,146,317,146]
+middle region = [335,219,428,219,450,253,344,253]
+rear region = [366,332,502,332,545,395,382,395]
+calibration point = [96,338],[196,151],[381,156],[496,310]
+base line = [384,223],[413,297]
+base length = 6.000000,near_point_length =20.000000
+coil actual length = 3,2
+lane region = 0,[205,85,267,85,193,457,19,457]
+lane region = 1,[270,86,296,86,388,461,201,461]
+lane region = 2,[298,74,331,74,592,466,401,466]
+person region = 0,[392,472,392,386,504,386,504,472]
+nboxes = 10
+fuzzy degree = 22
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =38,tail = 49,density =27
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 57,density =28
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =57,tail = 62,density =12
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =23,tail = 23,density =27
+coil 1 [0,0,0,0], coil 2 [1,6,60,0] head =21,tail = 53,density =70
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 22,density =12
+degree = [393,30],[289,40],[190,50]
+nboxes = 4
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =44
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =21,tail = 53,density =67
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 22,density =12
+degree = [393,30],[289,40],[190,50]
+[5:42:21][info](camera_service.c:309)====>cam_info[1]: creating thread ............................
+alg malloc ok 
+[5:42:21][info](camera_service.c:137)====>camera: 2 open 
+
+ncs_id =2
+lane region = [257,20,298,20,202,470,23,470]
+front region = [207,115,278,115,274,135,197,135]
+middle region = [154,217,256,217,249,251,137,251]
+rear region = [88,344,229,344,219,394,62,394]
+lane region = [304,25,314,25,380,468,208,468]
+front region = [289,94,323,94,328,125,282,125]
+middle region = [261,220,342,220,347,251,254,251]
+rear region = [237,333,359,333,369,399,222,399]
+lane region = [320,23,337,23,567,459,381,459]
+front region = [330,96,375,96,391,125,334,125]
+middle region = [348,220,441,220,456,248,352,248]
+rear region = [364,334,501,334,534,396,373,396]
+calibration point = [92,331],[212,144],[384,154],[479,315]
+base line = [313,248],[314,326]
+base length = 6.000000,near_point_length =20.000000
+coil actual length = 3,3
+lane region = 0,[257,20,298,20,202,470,23,470]
+lane region = 1,[304,25,314,25,380,468,208,468]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =44
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =42,tail = 53,density =27
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 22,density =12
+degree = [393,30],[289,40],[190,50]
+lane region = 2,[320,23,337,23,567,459,381,459]
+person region = 0,[391,471,391,385,503,385,503,471]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =44
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =41,tail = 53,density =30
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 22,density =12
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =44
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =40,tail = 52,density =29
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 22,density =12
+degree = [393,30],[289,40],[190,50]
+[5:42:22][info](camera_service.c:309)====>cam_info[2]: creating thread ............................
+alg malloc ok 
+[5:42:22][info](camera_service.c:137)====>camera: 3 open 
+
+ncs_id =3
+lane region = [248,22,274,22,196,474,21,474]
+front region = [201,115,258,115,254,139,189,139]
+middle region = [156,204,243,204,238,235,140,235]
+rear region = [94,329,221,329,210,394,61,394]
+lane region = [278,23,292,23,371,468,206,468]
+front region = [264,107,307,107,311,133,260,133]
+middle region = [248,204,323,204,330,240,242,240]
+rear region = [229,325,346,325,358,393,218,393]
+lane region = [302,20,305,20,608,475,387,475]
+front region = [320,111,364,111,378,132,323,132]
+middle region = [337,206,440,206,451,240,343,240]
+rear region = [360,328,513,328,554,394,372,394]
+calibration point = [121,298],[200,148],[379,144],[489,307]
+base line = [372,209],[390,271]
+base length = 6.000000,near_point_length =20.000000
+coil actual length = 3,2
+lane region = 0,[248,22,274,22,196,474,21,474]
+lane region = 1,[278,23,292,23,371,468,206,468]
+nboxes = 4
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =21,tail = 51,density =54
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 22,density =0
+degree = [393,30],[289,40],[190,50]
+lane region = 2,[302,20,305,20,608,475,387,475]
+person region = 0,[391,471,391,385,503,385,503,471]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =21,tail = 51,density =53
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 33,density =29
+degree = [393,30],[289,40],[190,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =21,tail = 51,density =53
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 22,density =0
+degree = [393,30],[289,40],[190,50]
+nboxes = 5
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =37,tail = 50,density =34
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 22,density =0
+degree = [393,30],[289,40],[190,50]
+[5:42:22][info](camera_service.c:309)====>cam_info[3]: creating thread ............................
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =37,tail = 50,density =34
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 33,density =29
+degree = [393,30],[289,40],[190,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =35,tail = 50,density =37
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 46,density =59
+degree = [393,30],[289,40],[190,50]
+nboxes = 5
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =35,tail = 50,density =39
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 33,density =59
+degree = [393,30],[289,40],[190,50]
+nboxes = 4
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =34,tail = 48,density =37
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 33,density =60
+degree = [393,30],[289,40],[190,50]
+nboxes = 4
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 29,density =17
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =33,tail = 48,density =37
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =30
+degree = [393,30],[289,40],[190,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =28
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =33,tail = 47,density =38
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 53,density =76
+degree = [393,30],[289,40],[190,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =28
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =31,tail = 47,density =40
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 54,density =76
+degree = [393,30],[289,40],[190,50]
+nboxes = 8
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =28
+coil 1 [1,6,44,0], coil 2 [1,6,60,0] head =31,tail = 46,density =39
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 46,density =77
+degree = [393,30],[289,40],[190,50]
+[5:42:22][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =28
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =27,tail = 47,density =52
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =34,tail = 46,density =48
+degree = [393,30],[289,40],[190,50]
+nboxes = 0
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+degree = [298,30],[203,40],[155,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =28
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =26,tail = 46,density =52
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =48
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+fuzzy degree = 22
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =18,tail = 49,density =62
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+degree = [298,30],[203,40],[155,50]
+nboxes = 4
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =18,tail = 48,density =60
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =29
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =26,tail = 45,density =51
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =46,tail = 53,density =48
+degree = [393,30],[289,40],[190,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =29
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =23,tail = 45,density =57
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =34,tail = 54,density =46
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =29,tail = 48,density =24
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =28,tail = 48,density =26
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =29
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =23,tail = 44,density =55
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =34,tail = 54,density =48
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =28,tail = 46,density =25
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =29
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =22,tail = 43,density =55
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =34,tail = 54,density =48
+degree = [393,30],[289,40],[190,50]
+nboxes = 4
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =18,tail = 43,density =49
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =48
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =22,tail = 42,density =51
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =31
+degree = [393,30],[289,40],[190,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =49
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =22,tail = 42,density =52
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =33,tail = 46,density =30
+degree = [393,30],[289,40],[190,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =18,tail = 43,density =48
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 24,density =26
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+nboxes = 5
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =26,tail = 42,density =29
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 20,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+[5:42:23][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =48
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =21,tail = 40,density =48
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =30
+degree = [393,30],[289,40],[190,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =25,tail = 42,density =30
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 24,density =26
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+nboxes = 0
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+degree = [262,30],[173,40],[131,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =48
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =21,tail = 40,density =48
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =30
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+fuzzy degree = 22
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =22,tail = 33,density =41
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 24,density =33
+degree = [262,30],[173,40],[131,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =24,tail = 41,density =32
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 36,density =54
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =17
+degree = [298,30],[203,40],[155,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =48
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =21,tail = 40,density =47
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =30
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,60,0] head =22,tail = 33,density =44
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 24,density =33
+degree = [262,30],[173,40],[131,50]
+nboxes = 4
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =24,tail = 38,density =32
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =20,tail = 24,density =55
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 24,density =16
+degree = [298,30],[203,40],[155,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =48
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =21,tail = 40,density =47
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =30
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,60,0], coil 2 [1,6,60,0] head =21,tail = 32,density =50
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 24,density =33
+degree = [262,30],[173,40],[131,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =48
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =21,tail = 40,density =46
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =30
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,60,0], coil 2 [1,6,60,0] head =22,tail = 29,density =38
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 24,density =33
+degree = [262,30],[173,40],[131,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =23,tail = 37,density =33
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =20,tail = 51,density =69
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 89,density =26
+degree = [298,30],[203,40],[155,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =48
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =21,tail = 40,density =46
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =0
+degree = [393,30],[289,40],[190,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,60,0], coil 2 [1,6,60,0] head =21,tail = 29,density =41
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 24,density =33
+degree = [262,30],[173,40],[131,50]
+nboxes = 6
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =21,tail = 60,density =47
+coil 1 [2,6,60,0], coil 2 [1,6,60,0] head =21,tail = 39,density =46
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =22,tail = 22,density =0
+degree = [393,30],[289,40],[190,50]
+nboxes = 7
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,20,0], coil 2 [1,6,41,0] head =22,tail = 36,density =35
+coil 1 [0,0,0,0], coil 2 [1,6,0,0] head =20,tail = 51,density =69
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =21,tail = 89,density =26
+degree = [298,30],[203,40],[155,50]
+nboxes = 3
+person num = 0
+person obj =0,direction num = [0,0]
+coil 1 [1,6,60,0], coil 2 [1,6,60,0] head =19,tail = 30,density =60
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =0,tail = 0,density =0
+coil 1 [0,0,0,0], coil 2 [0,0,0,0] head =20,tail = 24,density =33
+degree = [262,30],[173,40],[131,50]
+[5:42:23][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[05:42:20.3202][26544]I[GraphManager.cpp:425] Load graph success, graphId=2 graphName=LPRNet
+[05:42:20.3398][26543]I[ClientManager.cpp:159] client(id:3) registered: clientName=HDDLPlugin socket=4
+[05:42:20.6778][26543]I[ClientManager.cpp:159] client(id:4) registered: clientName=HDDLPlugin socket=5
+[05:42:20.7631][26543]I[ClientManager.cpp:159] client(id:5) registered: clientName=HDDLPlugin socket=6
+[05:42:21.1006][26543]I[ClientManager.cpp:159] client(id:6) registered: clientName=HDDLPlugin socket=7
+[05:42:21.1853][26543]I[ClientManager.cpp:159] client(id:7) registered: clientName=HDDLPlugin socket=8
+[05:42:21.5144][26543]I[ClientManager.cpp:159] client(id:8) registered: clientName=HDDLPlugin socket=9
+[1;31;40m[05:42:23.5596][26551]ERROR[hddl_protocol.cpp:562] read socket(idx=9) failed, user=HDDLPlugin leftBytes=488[0m
+[05:42:23.5596][26551]I[MessageDispatcher.cpp:203] failed to receive hddl message from socket (9)
+[1;31;40m[05:42:23.5599][26551]ERROR[hddl_protocol.cpp:562] read socket(idx=8) failed, user=HDDLPlugin[0m
+[05:42:23.5599][26551]I[MessageDispatcher.cpp:203] failed to receive hddl message from socket (8)
+[1;31;40m[05:42:23.5603][26551]ERROR[hddl_protocol.cpp:562] read socket(idx=7) failed, user=HDDLPlugin leftBytes=488[0m
+[05:42:23.5604][26551]I[MessageDispatcher.cpp:203] failed to receive hddl message from socket (7)
+[1;31;40m[05:42:23.5609][26551]ERROR[hddl_protocol.cpp:562] read socket(idx=6) failed, user=HDDLPlugin leftBytes=488[0m
+[05:42:23.5610][26551]I[MessageDispatcher.cpp:203] failed to receive hddl message from socket (6)
+[1;31;40m[05:42:23.5615][26551]ERROR[hddl_protocol.cpp:562] read socket(idx=5) failed, user=HDDLPlugin leftBytes=488[0m
+[05:42:23.5615][26551]I[MessageDispatcher.cpp:203] failed to receive hddl message from socket (5)
+[1;31;40m[05:42:23.5621][26551]ERROR[hddl_protocol.cpp:562] read socket(idx=4) failed, user=HDDLPlugin[0m
+[05:42:23.5621][26551]I[MessageDispatcher.cpp:203] failed to receive hddl message from socket (4)
+[1;31;40m[05:42:23.5626][26551]ERROR[hddl_protocol.cpp:562] read socket(idx=3) failed, user=HDDLPlugin leftBytes=488[0m
+[05:42:23.5626][26551]I[MessageDispatcher.cpp:203] failed to receive hddl message from socket (3)
+[1;31;40m[05:42:23.5635][26551]ERROR[hddl_protocol.cpp:562] read socket(idx=2) failed, user=HDDLPlugin leftBytes=488[0m
+[05:42:23.5635][26551]I[MessageDispatcher.cpp:203] failed to receive hddl message from socket (2)
+[05:42:23.5645][26549]I[ResultDispatcher.cpp:456] Destroy task(60), reason=canceled
+[05:42:23.5825][26549]I[ResultDispatcher.cpp:456] Destroy task(61), reason=canceled
+[05:42:23.7061][26544]I[GraphManager.cpp:464] graph(2) destroyed
+[05:42:23.7115][26544]I[GraphManager.cpp:464] graph(1) destroyed
+[05:42:24.4988][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 35.75 %           | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:42:29.4994][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:42:34.4999][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:42:39.5006][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:42:44.5011][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:42:49.5016][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:42:54.5023][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:42:59.5028][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:43:04.5034][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:43:09.5040][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:43:14.5047][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:43:19.5053][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2               |
+| util%       | 0.0 %             | 0.0 %             |
+| thermal     | 0.00(0)           | 0.00(0)           |
+| scheduler   | squeeze           | squeeze           |
+| comment     |                   |                   |
+| resetTimes  | 0                 | 0                 |
+| cacheNum    | 0                 | 0                 |
+| cacheGraph0 |                   |                   |
++-------------+-------------------+-------------------+
+| status      | WAIT_GRAPH        | WAIT_GRAPH        |
+| fps         |                   |                   |
+| curGraph    |                   |                   |
+| loadTime    |                   |                   |
+| runTime     |                   |                   |
+| inference   |                   |                   |
+| prevGraph   | Darkent2Caffe     | Darkent2Caffe     |
+| loadTime    | 20190626 05:42:20 | 20190626 05:42:23 |
+| unloadTime  | 20190626 05:42:23 | 20190626 05:42:23 |
+| runTime     | 00:00:03          | 00:00:00          |
+| inference   | 61                | 0                 |
++-------------+-------------------+-------------------+
+[05:43:24.5058][26525]I[DeviceManager.cpp:680] DeviceSnapshot(subclass=0):
+| deviceId    | 224(0xe0)         | 225(0xe1)         |
+| device      | 4.1               | 4.2            

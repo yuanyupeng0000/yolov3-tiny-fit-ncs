@@ -1,0 +1,41 @@
+[5:43:24][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+[5:43:25][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+alg malloc ok 
+[5:43:25][info](camera_service.c:137)====>camera: 0 open 
+
+[5:43:25][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[ INFO ] Loading network files:
+	FP16/20190104102512_TinyYoloV3NCS.xml
+	FP16/20190104102512_TinyYoloV3NCS.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+init ok
+finding ...
+py found
+[05:43:25.7954][26663]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[05:43:25.7955][26663]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [05:43:25.7956][26663]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [05:43:25.7958][26663]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [05:43:25.7962][26663]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [05:43:25.7963][26678]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:9
+[5:43:26][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+[ INFO ] Loading network files:
+	FP16/license-plate-recognition-barrier-0001.xml
+	FP16/license-plate-recognition-barrier-0001.bin
+[ INFO ] Preparing inputs
+[HDDLPlugin] [05:43:26.4189][26663]I[HddlBlob.cpp:165] Info: HddlBlob initialize ion ...
+[HDDLPlugin] [05:43:26.4190][26663]I[HddlBlob.cpp:175] Info: HddlBlob initialize ion successfully.
+[HDDLPlugin] [05:43:26.5280][26679]I[Dispatcher2.cpp:219] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [05:43:26.5283][26663]I[Dispatcher2.cpp:88] Info: Client dispatcher exit.
+[HDDLPlugin] [05:43:26.5285][26663]I[HddlClient.cpp:199] Info: Hddl client unregistered.
+no device open,continuing load NCS device
+no device open,continuing load NCS device
+no device open,continuing load NCS device

@@ -1,0 +1,66 @@
+[1:39:23][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+*********mCamDetectParam 1132*********
+[1:39:23][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[1:39:23][info](camera_service.c:137)====>camera: 0 open 
+
+alg malloc ok 
+[1:39:23][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[ INFO ] Loading network files:
+	FP16/20190104102512_TinyYoloV3NCS.xml
+	FP16/20190104102512_TinyYoloV3NCS.bin
+[ INFO ] Preparing inputs
+[ INFO ] Loading model to the plugin
+HDDL BSL configure file is not found or load failed, scanning automatically
+[ion_close][69]close ion_fd = 3
+init ok
+finding ...
+py found
+[01:39:24.5544][14986]I[ServiceStarter.cpp:93] Info: Found HDDL Service is not running. To start HDDL Service ...
+[01:39:24.5614][14986]I[ServiceStarter.cpp:40] Info: Waiting for HDDL Service getting ready ...
+[1:39:24][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
+HDDL BSL configure file is not found or load failed, scanning automatically
+## HDDL_INSTALL_DIR: /opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl
+[01:39:24.8014][15003]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_service.config' has been loaded
+[01:39:24.8024][15003]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_service_alive.mutex owner: user-'no_change', group-'users', mode-'0660'
+[01:39:24.8025][15003]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_service_ready.mutex owner: user-'no_change', group-'users', mode-'0660'
+[01:39:24.8025][15003]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_start_exit.mutex owner: user-'no_change', group-'users', mode-'0660'
+[01:39:24.8026][15003]I[AutobootStarter.cpp:127] Info: No running autoboot process. Start autoboot daemon...
+[01:39:27.9995][15003]I[AutobootStarter.cpp:71] Info: Found autoboot is running.
+[01:39:28.0058][15003]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_snapshot.sock owner: user-'no_change', group-'users', mode-'0660'
+[01:39:28.0060][15003]I[DeviceSchedulerFactory.cpp:48] Info: ## DeviceSchedulerFacotry ## Created Squeeze Device-Scheduler2.
+[01:39:28.0060][15003]I[DeviceManager.cpp:388] ## SqueezeScheduler created ##
+[usblink_open:453] open vsc device succ:29,path=/dev/myriad1
+[01:39:30.0100][15003]I[DeviceManager.cpp:496] worker(Wt4.2) created on device(4.2), type(0)
+[usblink_open:453] open vsc device succ:32,path=/dev/myriad0
+[01:39:32.0135][15003]I[DeviceManager.cpp:496] worker(Wt4.1) created on device(4.1), type(0)
+[01:39:32.0135][15003]I[DeviceManager.cpp:106] DEVICE FOUND : 2
+[01:39:32.0135][15003]I[DeviceManager.cpp:107] DEVICE OPENED : 2
+[01:39:32.0136][15003]I[DeviceManagerCreator.cpp:53] New device manager(DeviceManager0) created with subclass(0), deviceCount(2)
+[01:39:32.0141][15003]I[TaskSchedulerFactory.cpp:45] Info: ## TaskSchedulerFactory ## Created Polling Task-Scheduler.
+[01:39:32.0153][15003]I[FileHelper.cpp:272] Set file:/var/tmp/hddl_service.sock owner: user-'no_change', group-'users', mode-'0660'
+[01:39:32.0154][15003]I[MessageDispatcher.cpp:85] Message Dispatcher initialization finished
+[01:39:32.0155][15003]I[main.cpp:114] SERVICE IS READY ...
+[01:39:32.0776][14986]I[ServiceStarter.cpp:45] Info: Found HDDL Service is running.
+[HDDLPlugin] [01:39:32.0779][14986]I[ConfigParser.cpp:176] Config file '/opt/intel//computer_vision_sdk_2018.5.445/deployment_tools/inference_engine/external/hddl/config/hddl_api.config' has been loaded
+Hddl api version:2.2
+[HDDLPlugin] [01:39:32.0780][14986]I[HddlClient.cpp:255] Info: Create Dispatcher2.
+[HDDLPlugin] [01:39:32.0815][14986]I[HddlClient.cpp:266] Info: RegisterClient HDDLPlugin.
+[HDDLPlugin] [01:39:32.0820][15104]I[Dispatcher2.cpp:155] Info: SenderRoutine starts.
+Client Id:1
+[ INFO ] Loading network files:
+	FP16/license-plate-recognition-barrier-0001.xml
+	FP16/license-plate-recognition-barrier-0001.bin
+[ INFO ] Preparing inputs
+[HDDLPlugin] [01:39:32.7176][14986]I[HddlBlob.cpp:165] Info: HddlBlob initialize ion ...
+[HDDLPlugin] [01:39:32.7177][14986]I[HddlBlob.cpp:175] Info: HddlBlob initialize ion successfully.
+[HDDLPlugin] [01:39:32.8269][15105]I[Dispatcher2.cpp:219] Info: Listen Thread wake up and to exit.
+[HDDLPlugin] [01:39:32.8271][14986]I[Dispatcher2.cpp:88] Info: Client dispatcher exit.
+[HDDLPlugin] [01:39:32.8274][14986]I[HddlClient.cpp:199] Info: Hddl client unregistered.
+no device open,continuing load NCS device
+no device open,continuing load NCS device
+no device open,continuing load NCS device

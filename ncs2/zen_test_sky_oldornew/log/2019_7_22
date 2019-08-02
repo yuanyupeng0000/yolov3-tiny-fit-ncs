@@ -1,0 +1,8 @@
+[14:2:13][info](fvdmysql/fvdmysql.c:68)====>Error connecting to Mysql: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+
+[14:2:13][info](client_net.c:723)====>checkaddr: 智能交通设备 loglevel: 3
+[14:2:14][info](camera_service.c:137)====>camera: 0 open 
+
+[14:2:14][info](common.c:1095)====>./res/ntpclient -s -i 60 -g 1 -p 10009 -h 210.72.145.44 >/dev/null 2>&1  &
+[14:2:15][info](camera/camera_rtsp.c:23)====>camera open is ok.
+
