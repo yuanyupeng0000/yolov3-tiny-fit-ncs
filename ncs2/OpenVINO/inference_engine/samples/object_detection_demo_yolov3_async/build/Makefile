@@ -150,6 +150,33 @@ Common.cpp.s:
 	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.s
 .PHONY : Common.cpp.s
 
+detector.o: detector.cpp.o
+
+.PHONY : detector.o
+
+# target to build an object file
+detector.cpp.o:
+	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/detector.cpp.o
+.PHONY : detector.cpp.o
+
+detector.i: detector.cpp.i
+
+.PHONY : detector.i
+
+# target to preprocess a source file
+detector.cpp.i:
+	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/detector.cpp.i
+.PHONY : detector.cpp.i
+
+detector.s: detector.cpp.s
+
+.PHONY : detector.s
+
+# target to generate assembly for a file
+detector.cpp.s:
+	$(MAKE) -f CMakeFiles/object_detection_demo_yolov3_async.dir/build.make CMakeFiles/object_detection_demo_yolov3_async.dir/detector.cpp.s
+.PHONY : detector.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... Common.o"
 	@echo "... Common.i"
 	@echo "... Common.s"
+	@echo "... detector.o"
+	@echo "... detector.i"
+	@echo "... detector.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

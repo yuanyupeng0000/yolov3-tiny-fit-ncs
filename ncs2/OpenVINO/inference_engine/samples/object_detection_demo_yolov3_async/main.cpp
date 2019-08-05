@@ -23,17 +23,11 @@
 
 #include <samples/ocv_common.hpp>
 #include <samples/slog.hpp>
-
-#include "object_detection_demo_yolov3_async.hpp"
 #include "Common.h"
-
+#include "object_detection_demo_yolov3_async.hpp"
 #include <ext_list.hpp>
-
+#include "detector.h"
 using namespace InferenceEngine;
-
-#define yolo_scale_13 13
-#define yolo_scale_26 26
-#define yolo_scale_52 52
 
 bool ParseAndCheckCommandLine(int argc, char *argv[]) {
     // ---------------------------Parsing and validating the input arguments--------------------------------------
@@ -54,150 +48,60 @@ bool ParseAndCheckCommandLine(int argc, char *argv[]) {
     return true;
 }
 
-void FrameToBlob(const cv::Mat &frame, InferRequest::Ptr &inferRequest, const std::string &inputName) {
-    if (FLAGS_auto_resize) {
-        /* Just set input blob containing read image. Resize and layout conversion will be done automatically */
-        inferRequest->SetBlob(inputName, wrapMat2Blob(frame));
-    } else {
-        /* Resize and copy data from the image to the input blob */
-        Blob::Ptr frameBlob = inferRequest->GetBlob(inputName);
-        matU8ToBlob<uint8_t>(frame, frameBlob);
-    }
-}
+int main(int argc, char *argv[]){
+    /** This demo covers a certain topology and cannot be generalized for any object detection **/
+    std::cout << "InferenceEngine: " << GetInferenceEngineVersion() << std::endl;
 
-static int EntryIndex(int side, int lcoords, int lclasses, int location, int entry) {
-    int n = location / (side * side);
-    int loc = location % (side * side);
-    return n * side * side * (lcoords + lclasses + 1) + entry * side * side + loc;
-}
-
-struct DetectionObject {
-    int xmin, ymin, xmax, ymax, class_id;
-    float confidence;
-
-    DetectionObject(double x, double y, double h, double w, int class_id, float confidence, float h_scale, float w_scale) {
-        this->xmin = static_cast<int>((x - w / 2) * w_scale);
-        this->ymin = static_cast<int>((y - h / 2) * h_scale);
-        this->xmax = static_cast<int>(this->xmin + w * w_scale);
-        this->ymax = static_cast<int>(this->ymin + h * h_scale);
-        this->class_id = class_id;
-        this->confidence = confidence;
+    // ------------------------------ Parsing and validating the input arguments ---------------------------------
+    if (!ParseAndCheckCommandLine(argc, argv)) {
+        return 0;
     }
 
-    bool operator<(const DetectionObject &s2) const {
-        return this->confidence < s2.confidence;
+    slog::info << "Reading input" << slog::endl;
+    cv::VideoCapture cap;
+    if (!((FLAGS_i == "cam") ? cap.open(0) : cap.open(FLAGS_i.c_str()))) {
+        throw std::logic_error("Cannot open input file or camera: " + FLAGS_i);
     }
-};
 
-double IntersectionOverUnion(const DetectionObject &box_1, const DetectionObject &box_2) {
-    double width_of_overlap_area = fmin(box_1.xmax, box_2.xmax) - fmax(box_1.xmin, box_2.xmin);
-    double height_of_overlap_area = fmin(box_1.ymax, box_2.ymax) - fmax(box_1.ymin, box_2.ymin);
-    double area_of_overlap;
-    if (width_of_overlap_area < 0 || height_of_overlap_area < 0)
-        area_of_overlap = 0;
-    else
-        area_of_overlap = width_of_overlap_area * height_of_overlap_area;
-    double box_1_area = (box_1.ymax - box_1.ymin)  * (box_1.xmax - box_1.xmin);
-    double box_2_area = (box_2.ymax - box_2.ymin)  * (box_2.xmax - box_2.xmin);
-    double area_of_union = box_1_area + box_2_area - area_of_overlap;
-    return area_of_overlap / area_of_union;
-}
+    // read input (video) frame
+    cv::Mat frame;  cap >> frame;
+    cv::Mat next_frame;
 
-void ParseYOLOV3Output(const CNNLayerPtr &layer, const Blob::Ptr &blob, const unsigned long resized_im_h,
-                       const unsigned long resized_im_w, const unsigned long original_im_h,
-                       const unsigned long original_im_w,
-                       const double threshold, std::vector<DetectionObject> &objects) {
-    // --------------------------- Validating output parameters -------------------------------------
-    /*if (layer->type != "RegionYolo")
-        throw std::runtime_error("Invalid output type: " + layer->type + ". RegionYolo expected");*/
-    const int out_blob_h = static_cast<int>(blob->getTensorDesc().getDims()[2]);
-    const int out_blob_w = static_cast<int>(blob->getTensorDesc().getDims()[3]);
-    if (out_blob_h != out_blob_w)
-        throw std::runtime_error("Invalid size of output " + layer->name +
-        " It should be in NCHW layout and H should be equal to W. Current H = " + std::to_string(out_blob_h) +
-        ", current W = " + std::to_string(out_blob_h));
-    // --------------------------- Extracting layer parameters -------------------------------------
-    /*auto num = layer->GetParamAsInt("num");
-    try { num = layer->GetParamAsInts("mask").size(); } catch (...) {}
-    auto coords = layer->GetParamAsInt("coords");
-    auto classes = layer->GetParamAsInt("classes");
-    */
-    int num = 3;
-    int coords = 4;
-    int classes = 6;
-    //std::vector<float> anchors = {10.0, 13.0, 16.0, 30.0, 33.0, 23.0, 30.0, 61.0, 62.0, 45.0, 59.0, 119.0, 116.0, 90.0,
-    //                             156.0, 198.0, 373.0, 326.0};
-    std::vector<float> anchors = {10,25,  20,50,  30,75, 50,125,  80,200,  150,150};
-    try { anchors = layer->GetParamAsFloats("anchors"); } catch (...) {}
-    auto side = out_blob_h;
-    int anchor_offset = 0;
-    switch (side) {
-        case yolo_scale_13:
-            anchor_offset = 2 * 3; //2 * 6;
-            break;
-        case yolo_scale_26:
-            anchor_offset = 2 * 0; //2 * 3;
-            break;
-        case yolo_scale_52:
-            anchor_offset = 2 * 0;
-            break;
-        default:
-            throw std::runtime_error("Invalid output size");
+    const size_t width  = (size_t) cap.get(cv::CAP_PROP_FRAME_WIDTH);
+    const size_t height = (size_t) cap.get(cv::CAP_PROP_FRAME_HEIGHT);
+
+    if (!cap.grab()) {
+        throw std::logic_error("This demo supports only video (or camera) inputs !!! "
+                               "Failed to get next frame from the " + FLAGS_i);
     }
-    auto side_square = side * side;
-    const float *output_blob = blob->buffer().as<PrecisionTrait<Precision::FP32>::value_type *>();
-    // --------------------------- Parsing YOLO Region output -------------------------------------
-    for (int i = 0; i < side_square; ++i) {
-        int row = i / side;
-        int col = i % side;
-        for (int n = 0; n < num; ++n) {
-            int obj_index = EntryIndex(side, coords, classes, n * side * side + i, coords);
-            int box_index = EntryIndex(side, coords, classes, n * side * side + i, 0);
-            #if 0
-            float scale = output_blob[obj_index];
-            if (scale < threshold)
-                continue;
-            double x = (col + output_blob[box_index + 0 * side_square]) / side * resized_im_w;
-            double y = (row + output_blob[box_index + 1 * side_square]) / side * resized_im_h;
-            double height = std::exp(output_blob[box_index + 3 * side_square]) * anchors[anchor_offset + 2 * n + 1];
-            double width = std::exp(output_blob[box_index + 2 * side_square]) * anchors[anchor_offset + 2 * n];
-            
-            for (int j = 0; j < classes; ++j) {
-                int class_index = EntryIndex(side, coords, classes, n * side_square + i, coords + 1 + j);
-                float prob = scale * output_blob[class_index];
-                if (prob < threshold)
-                    continue;
-                DetectionObject obj(x, y, height, width, j, prob,
-                        static_cast<float>(original_im_h) / static_cast<float>(resized_im_h),
-                        static_cast<float>(original_im_w) / static_cast<float>(resized_im_w));
-                objects.push_back(obj);
+    // -----------------------------------------------------------------------------------------------------
+    std::string binFileName = fileNameNoExt(FLAGS_m) + ".bin";
+    Detector detector(FLAGS_m, binFileName, FLAGS_d);
+    slog::info << "Start inference " << slog::endl;
+
+    bool isLastFrame = false;
+    while (true) {
+        auto t0 = std::chrono::high_resolution_clock::now();
+        // Here is the first asynchronous point:
+        // in the Async mode, we capture frame to populate the NEXT infer request
+        // in the regular mode, we capture frame to the CURRENT infer request
+        if (!cap.read(next_frame)) {
+            if (next_frame.empty()) {
+                isLastFrame = true;  // end of video file
+            } else {
+                throw std::logic_error("Failed to get frame from cv::VideoCapture");
             }
-            #else
-            float scale = logistic_activate(output_blob[obj_index]);
-            if (scale < threshold)
-                continue;
-            double x = (col + logistic_activate(output_blob[box_index + 0 * side_square])) / side * resized_im_w;
-            double y = (row + logistic_activate(output_blob[box_index + 1 * side_square])) / side * resized_im_h;
-            double height = std::exp(output_blob[box_index + 3 * side_square]) * anchors[anchor_offset + 2 * n + 1];
-            double width = std::exp(output_blob[box_index + 2 * side_square]) * anchors[anchor_offset + 2 * n];
-            
-            for (int j = 0; j < classes; ++j) {
-                int class_index = EntryIndex(side, coords, classes, n * side_square + i, coords + 1 + j);
-                float prob = scale * output_blob[class_index];
-                if (prob < threshold)
-                    continue;
-                DetectionObject obj(x, y, height, width, j, prob,
-                        static_cast<float>(original_im_h) / static_cast<float>(resized_im_h),
-                        static_cast<float>(original_im_w) / static_cast<float>(resized_im_w));
-                objects.push_back(obj);
-            }
-            #endif
         }
+        detector.Detect(frame);
+        frame = next_frame;
+        next_frame = cv::Mat();
+        const int key = cv::waitKey(1);
+        if (27 == key)  // Esc
+            break;
     }
 }
 
-
-int main(int argc, char *argv[]) {
+int main_bak(int argc, char *argv[]) {
     try {
         /** This demo covers a certain topology and cannot be generalized for any object detection **/
         std::cout << "InferenceEngine: " << GetInferenceEngineVersion() << std::endl;
@@ -228,7 +132,7 @@ int main(int argc, char *argv[]) {
 
         // --------------------------- 1. Load Plugin for inference engine -------------------------------------
         slog::info << "Loading plugin" << slog::endl;
-        InferencePlugin plugin = PluginDispatcher({"../../../lib/intel64", ""}).getPluginByDevice(FLAGS_d);
+        InferencePlugin plugin = PluginDispatcher({"/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/lib/ubuntu_16.04/intel64", ""}).getPluginByDevice(FLAGS_d);
         printPluginVersion(plugin, std::cout);
 
         /**Loading extensions to the plugin **/
@@ -329,6 +233,7 @@ int main(int argc, char *argv[]) {
         auto total_t0 = std::chrono::high_resolution_clock::now();
         auto wallclock = std::chrono::high_resolution_clock::now();
         double ocv_decode_time = 0, ocv_render_time = 0;
+        //float FLAGS_t = 0.3;
 
         while (true) {
             auto t0 = std::chrono::high_resolution_clock::now();
@@ -423,7 +328,7 @@ int main(int argc, char *argv[]) {
                         continue;
                     auto label = object.class_id;
                     float confidence = object.confidence;
-                    if (FLAGS_r) {
+                    if (/*FLAGS_r*/true) {
                         std::cout << "[" << label << "] element, prob = " << confidence <<
                                   "    (" << object.xmin << "," << object.ymin << ")-(" << object.xmax << "," << object.ymax << ")"
                                   << ((confidence > FLAGS_t) ? " WILL BE RENDERED!" : "") << std::endl;

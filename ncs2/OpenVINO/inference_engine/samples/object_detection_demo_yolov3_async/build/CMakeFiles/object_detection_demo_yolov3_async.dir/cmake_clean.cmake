@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/object_detection_demo_yolov3_async.dir/Common.cpp.o"
   "CMakeFiles/object_detection_demo_yolov3_async.dir/main.cpp.o"
+  "CMakeFiles/object_detection_demo_yolov3_async.dir/detector.cpp.o"
   "object_detection_demo_yolov3_async.pdb"
   "object_detection_demo_yolov3_async"
 )

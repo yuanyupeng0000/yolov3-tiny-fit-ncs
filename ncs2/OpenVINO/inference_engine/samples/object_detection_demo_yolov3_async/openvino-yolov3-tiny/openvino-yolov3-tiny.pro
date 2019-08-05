@@ -4,11 +4,13 @@ DISTFILES += \
 
 HEADERS += \
     ../Common.h \
-    ../object_detection_demo_yolov3_async.hpp
+    ../object_detection_demo_yolov3_async.hpp \
+    ../detector.h
 
 SOURCES += \
     ../Common.cpp \
-    ../main.cpp
+    ../main.cpp \
+    ../detector.cpp
 INCLUDEPATH += /opt/intel/computer_vision_sdk/deployment_tools/inference_engine/include \
     /opt/intel/computer_vision_sdk/deployment_tools/inference_engine/samples/common \
     /opt/intel/computer_vision_sdk/deployment_tools/inference_engine/src/extension
