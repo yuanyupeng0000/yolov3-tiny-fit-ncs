@@ -10,7 +10,8 @@
 
 using namespace InferenceEngine;
 
-Detector::Detector(std::string& inputXml, std::string& inputBin, std::string& inputDevice, int nireq){
+Detector::Detector(std::string& inputXml, std::string& inputBin, std::string& inputDevice, float thresh, int nireq)
+    :thresh(thresh), nireq(nireq), current_request_id(0-nireq){
     try {
         // --------------------------- 1. Load Plugin for inference engine -------------------------------------
         slog::info << "Loading plugin" << slog::endl;
@@ -99,8 +100,11 @@ Detector::Detector(std::string& inputXml, std::string& inputBin, std::string& in
         // -----------------------------------------------------------------------------------------------------
 
         // --------------------------- 5. Creating infer request -----------------------------------------------
-        async_infer_request_next = network.CreateInferRequestPtr();
-        async_infer_request_curr = network.CreateInferRequestPtr();
+        for(int i=0; i<this->nireq; i++){
+            this->IfReqs[i] = network.CreateInferRequestPtr();
+        }
+        //async_infer_request_next = network.CreateInferRequestPtr();
+        //async_infer_request_curr = network.CreateInferRequestPtr();
         // -----------------------------------------------------------------------------------------------------
     }
     catch (const std::exception& error) {
@@ -114,11 +118,7 @@ void Detector::Detect(const cv::Mat frame){
     try {
         // --------------------------- 6. Doing inference ------------------------------------------------------
         slog::info << "Start inference " << slog::endl;
-
-        bool isLastFrame = false;
-        bool isAsyncMode = false;  // execution is always started using SYNC mode
-        bool isModeChanged = false;  // set to TRUE when execution mode is changed (SYNC<->ASYNC)
-
+        bool isAsyncMode = true;
         typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
         auto total_t0 = std::chrono::high_resolution_clock::now();
         auto wallclock = std::chrono::high_resolution_clock::now();
@@ -129,19 +129,6 @@ void Detector::Detect(const cv::Mat frame){
         // in the Async mode, we capture frame to populate the NEXT infer request
         // in the regular mode, we capture frame to the CURRENT infer request
         auto inputName = inputInfo.begin()->first;
-        if (frame.empty()) {
-
-        }
-        if (isAsyncMode) {
-            if (isModeChanged) {
-                FrameToBlob(frame, async_infer_request_curr, inputName);
-            }
-            if (!isLastFrame) {
-                FrameToBlob(/*next_frame*/frame, async_infer_request_next, inputName);
-            }
-        } else if (!isModeChanged) {
-            FrameToBlob(frame, async_infer_request_curr, inputName);
-        }
         auto t1 = std::chrono::high_resolution_clock::now();
         ocv_decode_time = std::chrono::duration_cast<ms>(t1 - t0).count();
 
@@ -149,126 +136,105 @@ void Detector::Detect(const cv::Mat frame){
         // Main sync point:
         // in the true Async mode, we start the NEXT infer request while waiting for the CURRENT to complete
         // in the regular mode, we start the CURRENT request and wait for its completion
-        if (isAsyncMode) {
-            if (isModeChanged) {
-                async_infer_request_curr->StartAsync();
-            }
-            if (!isLastFrame) {
-                async_infer_request_next->StartAsync();
-            }
-        } else if (!isModeChanged) {
-            async_infer_request_curr->StartAsync();
-        }
 
-        if (OK == async_infer_request_curr->Wait(IInferRequest::WaitMode::RESULT_READY)) {
-            t1 = std::chrono::high_resolution_clock::now();
-            ms detection = std::chrono::duration_cast<ms>(t1 - t0);
+        if(current_request_id >= 0){
+            if (OK == IfReqs[current_request_id]->Wait(IInferRequest::WaitMode::RESULT_READY)) {
+                t1 = std::chrono::high_resolution_clock::now();
+                ms detection = std::chrono::duration_cast<ms>(t1 - t0);
 
-            t0 = std::chrono::high_resolution_clock::now();
-            ms wall = std::chrono::duration_cast<ms>(t0 - wallclock);
-            wallclock = t0;
+                t0 = std::chrono::high_resolution_clock::now();
+                ms wall = std::chrono::duration_cast<ms>(t0 - wallclock);
+                wallclock = t0;
 
-            t0 = std::chrono::high_resolution_clock::now();
-            std::ostringstream out;
-            out << "OpenCV cap/render time: " << std::fixed << std::setprecision(2)
-                << (ocv_decode_time + ocv_render_time) << " ms";
-            cv::putText(frame, out.str(), cv::Point2f(0, 25), cv::FONT_HERSHEY_TRIPLEX, 0.6, cv::Scalar(0, 255, 0));
-            out.str("");
-            out << "Wallclock time " << (isAsyncMode ? "(TRUE ASYNC):      " : "(SYNC, press Tab): ");
-            out << std::fixed << std::setprecision(2) << wall.count() << " ms (" << 1000.f / wall.count() << " fps)";
-            cv::putText(frame, out.str(), cv::Point2f(0, 50), cv::FONT_HERSHEY_TRIPLEX, 0.6, cv::Scalar(0, 0, 255));
-            if (!isAsyncMode) {  // In the true async mode, there is no way to measure detection time directly
+                t0 = std::chrono::high_resolution_clock::now();
+                std::ostringstream out;
+                out << "OpenCV cap/render time: " << std::fixed << std::setprecision(2)
+                    << (ocv_decode_time + ocv_render_time) << " ms";
+                cv::putText(frame, out.str(), cv::Point2f(0, 25), cv::FONT_HERSHEY_TRIPLEX, 0.6, cv::Scalar(0, 255, 0));
                 out.str("");
-                out << "Detection time  : " << std::fixed << std::setprecision(2) << detection.count()
-                    << " ms ("
-                    << 1000.f / detection.count() << " fps)";
-                cv::putText(frame, out.str(), cv::Point2f(0, 75), cv::FONT_HERSHEY_TRIPLEX, 0.6,
-                            cv::Scalar(255, 0, 0));
-            }
-
-            // ---------------------------Processing output blobs--------------------------------------------------
-            // Processing results of the CURRENT request
-            unsigned long resized_im_h = inputInfo.begin()->second.get()->getDims()[0];
-            unsigned long resized_im_w = inputInfo.begin()->second.get()->getDims()[1];
-            const size_t width  = (size_t)frame.size().width;
-            const size_t height = (size_t)frame.size().height;
-            std::vector<DetectionObject> objects;
-            // Parsing outputs
-            for (auto &output : outputInfo) {
-                auto output_name = output.first;
-                CNNLayerPtr layer = netReader.getNetwork().getLayerByName(output_name.c_str());
-                Blob::Ptr blob = async_infer_request_curr->GetBlob(output_name);
-                ParseYOLOV3Output(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
-            }
-            // Filtering overlapping boxes
-            std::sort(objects.begin(), objects.end());
-            for (int i = 0; i < objects.size(); ++i) {
-                if (objects[i].confidence == 0)
-                    continue;
-                for (int j = i + 1; j < objects.size(); ++j)
-                    if (IntersectionOverUnion(objects[i], objects[j]) >= /*FLAGS_iou_t*/0.5)
-                        objects[j].confidence = 0;
-            }
-            // Drawing boxes
-            for (auto &object : objects) {
-                if (object.confidence < thresh)
-                    continue;
-                auto label = object.class_id;
-                float confidence = object.confidence;
-                if (/*FLAGS_r*/true) {
-                    std::cout << "[" << label << "] element, prob = " << confidence <<
-                              "    (" << object.xmin << "," << object.ymin << ")-(" << object.xmax << "," << object.ymax << ")"
-                              << ((confidence > thresh) ? " WILL BE RENDERED!" : "") << std::endl;
+                out << std::fixed << std::setprecision(2) << wall.count() << " ms (" << 1000.f / wall.count() << " fps)";
+                cv::putText(frame, out.str(), cv::Point2f(0, 50), cv::FONT_HERSHEY_TRIPLEX, 0.6, cv::Scalar(0, 0, 255));
+                if (!isAsyncMode) {  // In the true async mode, there is no way to measure detection time directly
+                    out.str("");
+                    out << "Detection time  : " << std::fixed << std::setprecision(2) << detection.count()
+                        << " ms ("
+                        << 1000.f / detection.count() << " fps";
+                    cv::putText(frame, out.str(), cv::Point2f(0, 75), cv::FONT_HERSHEY_TRIPLEX, 0.6,
+                                cv::Scalar(255, 0, 0));
                 }
-                if (confidence > thresh) {
-                    /** Drawing only objects when >confidence_threshold probability **/
-                    std::ostringstream conf;
-                    conf << ":" << std::fixed << std::setprecision(3) << confidence;
-                    cv::putText(frame,
-                            (label < labels.size() ? labels[label] : std::string("label #") + std::to_string(label))
-                                + conf.str(),
-                                cv::Point2f(object.xmin, object.ymin - 5), cv::FONT_HERSHEY_COMPLEX_SMALL, 1,
-                                cv::Scalar(0, 0, 255));
-                    cv::rectangle(frame, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255));
+                slog::info << 1000.f / detection.count() << " fps\n";
+                // ---------------------------Processing output blobs--------------------------------------------------
+                // Processing results of the CURRENT request
+                unsigned long resized_im_h = inputInfo.begin()->second.get()->getDims()[0];
+                unsigned long resized_im_w = inputInfo.begin()->second.get()->getDims()[1];
+                const size_t width  = (size_t)frame.size().width;
+                const size_t height = (size_t)frame.size().height;
+                std::vector<DetectionObject> objects;
+                // Parsing outputs
+                for (auto &output : outputInfo) {
+                    auto output_name = output.first;
+                    CNNLayerPtr layer = netReader.getNetwork().getLayerByName(output_name.c_str());
+                    Blob::Ptr blob = IfReqs[current_request_id]->GetBlob(output_name);
+                    ParseYOLOV3Output(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
                 }
+                slog::info << "current_request_id:" << current_request_id << slog::endl;
+                FrameToBlob(frame, IfReqs[current_request_id], inputName);
+                IfReqs[current_request_id]->StartAsync();
+                // Filtering overlapping boxes
+                std::sort(objects.begin(), objects.end());
+                for (int i = 0; i < objects.size(); ++i) {
+                    if (objects[i].confidence == 0)
+                        continue;
+                    for (int j = i + 1; j < objects.size(); ++j)
+                        if (IntersectionOverUnion(objects[i], objects[j]) >= /*FLAGS_iou_t*/0.5)
+                            objects[j].confidence = 0;
+                }
+                // Drawing boxes
+                for (auto &object : objects) {
+                    if (object.confidence < thresh)
+                        continue;
+                    auto label = object.class_id;
+                    float confidence = object.confidence;
+                    if (/*FLAGS_r*/true) {
+                        std::cout << "[" << label << "] element, prob = " << confidence <<
+                                  "    (" << object.xmin << "," << object.ymin << ")-(" << object.xmax << "," << object.ymax << ")"
+                                  << ((confidence > thresh) ? " WILL BE RENDERED!" : "") << std::endl;
+                    }
+                    if (confidence > thresh) {
+                        /** Drawing only objects when >confidence_threshold probability **/
+                        std::ostringstream conf;
+                        conf << ":" << std::fixed << std::setprecision(3) << confidence;
+                        cv::putText(frame,
+                                (label < labels.size() ? labels[label] : std::string("label #") + std::to_string(label))
+                                    + conf.str(),
+                                    cv::Point2f(object.xmin, object.ymin - 5), cv::FONT_HERSHEY_COMPLEX_SMALL, 1,
+                                    cv::Scalar(0, 0, 255));
+                        cv::rectangle(frame, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255));
+                    }
+                }
+            cv::imshow("Detection results", frame);
+
+            t1 = std::chrono::high_resolution_clock::now();
+            ocv_render_time = std::chrono::duration_cast<ms>(t1 - t0).count();
+
             }
-        cv::imshow("Detection results", frame);
-
-        t1 = std::chrono::high_resolution_clock::now();
-        ocv_render_time = std::chrono::duration_cast<ms>(t1 - t0).count();
-
-        /*if (isLastFrame) {
-            break;
-        }*/
-
-        if (isModeChanged) {
-            isModeChanged = false;
+        }
+        else{
+            slog::info << "current_request_id:" << current_request_id << slog::endl;
+            FrameToBlob(frame, IfReqs[current_request_id + nireq], inputName);
+            IfReqs[current_request_id + nireq]->StartAsync();
         }
 
-
-        // Final point:
-        // in the truly Async mode, we swap the NEXT and CURRENT requests for the next iteration
-        //frame = next_frame;
-        //next_frame = cv::Mat();
-        if (isAsyncMode) {
-            async_infer_request_curr.swap(async_infer_request_next);
+        this->current_request_id += 1;
+        if(this->current_request_id >= nireq){
+            this->current_request_id = 0;
         }
-
-        const int key = cv::waitKey(1);
-        if (27 == key)  // Esc
-            //break;
-        if (9 == key) {  // Tab
-            isAsyncMode ^= true;
-            isModeChanged = true;
-        }
-        }
-        // -----------------------------------------------------------------------------------------------------
         auto total_t1 = std::chrono::high_resolution_clock::now();
         ms total = std::chrono::duration_cast<ms>(total_t1 - total_t0);
         std::cout << "Total Inference time: " << total.count() << std::endl;
 
         /** Showing performace results **/
-        if (/*FLAGS_pc*/true) {
+        if (/*FLAGS_pc*/false) {
             printPerformanceCounts(*async_infer_request_curr, std::cout);
         }
     }
@@ -283,3 +249,74 @@ void Detector::Detect(const cv::Mat frame){
     slog::info << "Execution successful" << slog::endl;
     return;
 }
+
+void Detector::Detect(const cv::Mat frame, std::vector<DetectionObject>& objects){
+    try {
+        // --------------------------- 6. Doing inference ------------------------------------------------------
+        slog::info << "Start inference " << slog::endl;
+        typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
+        // Here is the first asynchronous point:
+        // in the Async mode, we capture frame to populate the NEXT infer request
+        // in the regular mode, we capture frame to the CURRENT infer request
+        auto inputName = inputInfo.begin()->first;
+        // Main sync point:
+        // in the true Async mode, we start the NEXT infer request while waiting for the CURRENT to complete
+        // in the regular mode, we start the CURRENT request and wait for its completion
+
+        if(current_request_id >= 0){
+            if (OK == IfReqs[current_request_id]->Wait(IInferRequest::WaitMode::RESULT_READY)) {
+                // ---------------------------Processing output blobs--------------------------------------------------
+                // Processing results of the CURRENT request
+                unsigned long resized_im_h = inputInfo.begin()->second.get()->getDims()[0];
+                unsigned long resized_im_w = inputInfo.begin()->second.get()->getDims()[1];
+                const size_t width  = (size_t)frame.size().width;
+                const size_t height = (size_t)frame.size().height;
+                //std::vector<DetectionObject> objects;
+                // Parsing outputs
+                for (auto &output : outputInfo) {
+                    auto output_name = output.first;
+                    CNNLayerPtr layer = netReader.getNetwork().getLayerByName(output_name.c_str());
+                    Blob::Ptr blob = IfReqs[current_request_id]->GetBlob(output_name);
+                    ParseYOLOV3Output(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
+                }
+                /** Showing performace results **/
+                //if (/*FLAGS_pc*/current_request_id >=0) {
+                //    printPerformanceCounts(*IfReqs[current_request_id], std::cout);
+                //}
+                slog::info << "current_request_id:" << current_request_id << slog::endl;
+                FrameToBlob(frame, IfReqs[current_request_id], inputName);
+                IfReqs[current_request_id]->StartAsync();
+                // Filtering overlapping boxes
+                std::sort(objects.begin(), objects.end());
+                for (int i = 0; i < objects.size(); ++i) {
+                    if (objects[i].confidence == 0)
+                        continue;
+                    for (int j = i + 1; j < objects.size(); ++j)
+                        if (IntersectionOverUnion(objects[i], objects[j]) >= /*FLAGS_iou_t*/0.5)
+                            objects[j].confidence = 0;
+                }
+            }
+        }
+        else{
+            slog::info << "current_request_id:" << current_request_id << slog::endl;
+            FrameToBlob(frame, IfReqs[current_request_id + nireq], inputName);
+            IfReqs[current_request_id + nireq]->StartAsync();
+        }
+
+        this->current_request_id += 1;
+        if(this->current_request_id >= nireq){
+            this->current_request_id = 0;
+        }
+    }
+    catch (const std::exception& error) {
+        std::cerr << "[ ERROR ] " << error.what() << std::endl;
+        return;
+    }
+    catch (...) {
+        std::cerr << "[ ERROR ] Unknown/internal exception happened." << std::endl;
+        return;
+    }
+    slog::info << "Execution successful" << slog::endl;
+    return;
+}
+

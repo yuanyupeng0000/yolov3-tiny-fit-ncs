@@ -76,12 +76,16 @@ int main(int argc, char *argv[]){
     }
     // -----------------------------------------------------------------------------------------------------
     std::string binFileName = fileNameNoExt(FLAGS_m) + ".bin";
-    Detector detector(FLAGS_m, binFileName, FLAGS_d);
+    Detector detector(FLAGS_m, binFileName, FLAGS_d, 0.3, 5);
     slog::info << "Start inference " << slog::endl;
 
     bool isLastFrame = false;
+    int N = 0;
+    typedef std::chrono::duration<double, std::ratio<1, 1000>> ms;
+    auto t0 = std::chrono::high_resolution_clock::now();
     while (true) {
-        auto t0 = std::chrono::high_resolution_clock::now();
+        N += 1;
+
         // Here is the first asynchronous point:
         // in the Async mode, we capture frame to populate the NEXT infer request
         // in the regular mode, we capture frame to the CURRENT infer request
@@ -92,7 +96,36 @@ int main(int argc, char *argv[]){
                 throw std::logic_error("Failed to get frame from cv::VideoCapture");
             }
         }
-        detector.Detect(frame);
+        //detector.Detect(frame);
+        std::vector<DetectionObject> objects;
+        detector.Detect(frame, objects);
+        // Drawing boxes
+        for (auto &object : objects) {
+            if (object.confidence < detector.thresh)
+                continue;
+            auto label = object.class_id;
+            float confidence = object.confidence;
+            if (/*FLAGS_r*/true) {
+                std::cout << "[" << label << "] element, prob = " << confidence <<
+                          "    (" << object.xmin << "," << object.ymin << ")-(" << object.xmax << "," << object.ymax << ")"
+                          << ((confidence > detector.thresh) ? " WILL BE RENDERED!" : "") << std::endl;
+            }
+            if (confidence > detector.thresh) {
+                /** Drawing only objects when >confidence_threshold probability **/
+                std::ostringstream conf;
+                conf << ":" << std::fixed << std::setprecision(3) << confidence;
+                cv::putText(frame,
+                        (label < detector.labels.size() ? detector.labels[label] : std::string("label #") + std::to_string(label))
+                            + conf.str(),
+                            cv::Point2f(object.xmin, object.ymin - 5), cv::FONT_HERSHEY_COMPLEX_SMALL, 1,
+                            cv::Scalar(0, 0, 255));
+                cv::rectangle(frame, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255));
+            }
+        }
+        cv::imshow("Detection results", frame);
+        auto t1 = std::chrono::high_resolution_clock::now();
+        ms detection = std::chrono::duration_cast<ms>(t1 - t0);
+        slog::info << "duration fps:" << 1000*N/detection.count() << slog::endl;
         frame = next_frame;
         next_frame = cv::Mat();
         const int key = cv::waitKey(1);

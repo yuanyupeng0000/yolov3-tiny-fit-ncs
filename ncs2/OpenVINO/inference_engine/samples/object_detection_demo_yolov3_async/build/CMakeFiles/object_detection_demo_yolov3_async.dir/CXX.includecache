@@ -65,6 +65,8 @@ samples/ocv_common.hpp
 -
 inference_engine.hpp
 -
+Common.h
+/data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/Common.h
 
 /data/github_repos/yolov3-tiny-fit-ncs/ncs2/OpenVINO/inference_engine/samples/object_detection_demo_yolov3_async/main.cpp
 gflags/gflags.h
