@@ -122,7 +122,7 @@ int main(int argc, char *argv[]){
                 cv::rectangle(frame, cv::Point2f(object.xmin, object.ymin), cv::Point2f(object.xmax, object.ymax), cv::Scalar(0, 0, 255));
             }
         }
-        cv::imshow("Detection results", frame);
+        //cv::imshow("Detection results", frame);
         auto t1 = std::chrono::high_resolution_clock::now();
         ms detection = std::chrono::duration_cast<ms>(t1 - t0);
         slog::info << "duration fps:" << 1000*N/detection.count() << slog::endl;

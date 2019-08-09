@@ -8,6 +8,7 @@
 #include <samples/common.hpp> //#include <samples/ocv_common.hpp>
 #include <ext_list.hpp>
 
+#define YOLOV3_ORIG
 using namespace InferenceEngine;
 
 Detector::Detector(std::string& inputXml, std::string& inputBin, std::string& inputDevice, float thresh, int nireq)
@@ -277,7 +278,11 @@ void Detector::Detect(const cv::Mat frame, std::vector<DetectionObject>& objects
                     auto output_name = output.first;
                     CNNLayerPtr layer = netReader.getNetwork().getLayerByName(output_name.c_str());
                     Blob::Ptr blob = IfReqs[current_request_id]->GetBlob(output_name);
+#ifdef YOLOV3_ORIG
                     ParseYOLOV3Output(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
+#else
+                    ParseYOLOV3TinyNcsOutput(layer, blob, resized_im_h, resized_im_w, height, width, thresh, objects);
+#endif
                 }
                 /** Showing performace results **/
                 //if (/*FLAGS_pc*/current_request_id >=0) {

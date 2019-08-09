@@ -58,6 +58,10 @@ void ParseYOLOV3Output(const CNNLayerPtr &layer, const Blob::Ptr &blob, const un
                        const unsigned long resized_im_w, const unsigned long original_im_h,
                        const unsigned long original_im_w,
                        const double threshold, std::vector<DetectionObject> &objects);
+void ParseYOLOV3TinyNcsOutput(const CNNLayerPtr &layer, const Blob::Ptr &blob, const unsigned long resized_im_h,
+                       const unsigned long resized_im_w, const unsigned long original_im_h,
+                       const unsigned long original_im_w,
+                       const double threshold, std::vector<DetectionObject> &objects);
 double IntersectionOverUnion(const DetectionObject &box_1, const DetectionObject &box_2);
 int indexsort_comparator(const void *pa, const void *pb);
 
